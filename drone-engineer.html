@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Drone Development Engineer Roadmap — OpenSemester</title>
+  <meta name="description" content="Open-source master learning path for Drone Development Engineering: Aerodynamics, PX4/ArduPilot C++, EKF2 state estimation, ROS 2, and 3D SLAM.">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/roadmap.css">
+  <link rel="stylesheet" href="css/resources.css">
+</head>
+<body>
+
+  <!-- Announcement Bar -->
+  <div class="announcement-bar">
+    <span>OpenSemester Roadmap Specification • </span>
+    <a href="https://github.com/OpenSemester" target="_blank">Edit on GitHub ↗</a>
+  </div>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="container nav-container">
+      <div class="brand-wrapper">
+        <a href="index.html" class="brand-logo">
+          <svg width="24" height="24" viewBox="0 0 24 24"><path fill="var(--accent-blue)" d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+          OpenSemester
+        </a>
+        <span class="repo-badge">Public</span>
+      </div>
+
+      <ul class="nav-menu">
+        <li class="nav-item"><a href="index.html">Home</a></li>
+        <li class="nav-item"><a href="index.html#roadmaps">Roadmaps</a></li>
+        <li class="nav-item"><a href="drone-engineer.html" class="active">Drone Engineer</a></li>
+        <li class="nav-item"><a href="#resources">Resources</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <a href="https://github.com/OpenSemester" target="_blank" rel="noopener" class="btn-github-star">
+          <svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+          ★ Star 1.2k
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Main Container -->
+  <main class="container">
+    
+    <!-- Header Card -->
+    <div class="roadmap-header-card">
+      <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 1.5rem;">
+        <div>
+          <div class="breadcrumb-nav">
+            <a href="index.html">OpenSemester</a>
+            <span>/</span>
+            <a href="index.html#roadmaps">roadmaps</a>
+            <span>/</span>
+            <span style="color: var(--text-primary);">drone-development-engineer</span>
+          </div>
+
+          <h1 style="font-size: 2.2rem; font-weight: 800; margin-bottom: 8px;">
+            Drone Development Engineer Roadmap
+          </h1>
+          <p style="color: var(--text-secondary); max-width: 720px; font-size: 1.05rem; line-height: 1.5;">
+            Master learning path covering aerodynamics, STM32 microcontrollers, PX4 C++ firmware, PID tuning, 24-state EKF2 sensor fusion, ROS 2 autonomy, and 3D SLAM vision.
+          </p>
+        </div>
+
+        <!-- Progress Dashboard -->
+        <div class="dev-progress-card">
+          <div class="dev-progress-title">
+            <span>Milestones Completed</span>
+            <span id="progress-percent" style="color: var(--accent-green);">0%</span>
+          </div>
+          <div class="dev-progress-bar-bg">
+            <div class="dev-progress-bar-fill" id="progress-bar-fill"></div>
+          </div>
+          <div style="font-size: 11px; font-family: var(--font-mono); color: var(--text-tertiary); margin-top: 6px; text-align: right;">
+            <span id="completed-count">0</span> / <span id="total-count">0</span> Completed
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Timeline Phases -->
+    <div id="roadmap-timeline" class="roadmap-container">
+      <!-- Injected by js/roadmap.js -->
+    </div>
+
+    <!-- Resource Section -->
+    <section id="resources" style="border-top: 1px solid var(--border-default); padding-top: 3rem;">
+      <div class="section-heading">
+        <div>
+          <h2>Drone Engineering Developer Resources</h2>
+          <p>Open-source repositories, specifications, and telemetry tools.</p>
+        </div>
+      </div>
+
+      <div class="resource-filter-bar">
+        <ul class="filter-pills" id="category-tabs">
+          <li><button class="filter-btn active" data-category="All">All Resources</button></li>
+          <li><button class="filter-btn" data-category="Software & Firmware">Software & Firmware</button></li>
+          <li><button class="filter-btn" data-category="Autonomy & AI">Autonomy & AI</button></li>
+          <li><button class="filter-btn" data-category="Tools & Software">Tools & Software</button></li>
+          <li><button class="filter-btn" data-category="Protocols & Hardware">Protocols & Hardware</button></li>
+        </ul>
+      </div>
+
+      <div class="dev-resource-grid" id="resources-grid">
+        <!-- Injected via app.js -->
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Slide-over Drawer Panel -->
+  <div class="drawer-backdrop" id="node-drawer">
+    <div class="drawer-panel">
+      <button class="drawer-close" id="drawer-close">✕</button>
+      <div id="drawer-body">
+        <!-- Dynamic drawer content -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div>
+        <p><strong>OpenSemester</strong> — Drone Development Engineer Roadmap Specification.</p>
+        <p style="margin-top: 4px; color: var(--text-tertiary);">Hosted on GitHub Pages • MIT License</p>
+      </div>
+      <ul class="footer-links">
+        <li><a href="https://github.com/OpenSemester" target="_blank">GitHub Org</a></li>
+        <li><a href="index.html">Home</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <script src="js/data.js"></script>
+  <script src="js/roadmap.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
