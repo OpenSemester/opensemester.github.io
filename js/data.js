@@ -3,7 +3,7 @@
 const DRONE_ROADMAP_DATA = {
   title: "Drone Development Engineer",
   subtitle: "Step-by-step master learning path from flight physics to ROS 2 autonomous systems.",
-  repoUrl: "https://github.com/OpenSemester/drone-development-roadmap",
+  repoUrl: "https://github.com/OpenSemester/opensemester.github.io",
   lastUpdated: "2026-07-25",
   totalModules: 24,
   estimatedTime: "6 - 9 Months",
@@ -123,12 +123,12 @@ const DRONE_ROADMAP_DATA = {
           topics: [
             "NuttX RTOS multi-threading, work queues, and memory pools",
             "PX4 uORB Middleware: Topic publish-subscribe pattern",
-            "ArduPilot AP_HAL Abstraction Layer & main thread loops",
-            "Building target firmware using CMake, Ninja, and GCC Toolchains"
+            "ArduPilot AP_HAL hardware abstraction layer and main thread loops",
+            "Compiling custom firmware targets using CMake, Ninja, and GNU ARM toolchains"
           ],
           resources: [
-            { title: "PX4 Autopilot GitHub Repository (28.5k ★)", url: "https://github.com/PX4/PX4-Autopilot", type: "GitHub" },
-            { title: "ArduPilot Autopilot Codebase (12.2k ★)", url: "https://github.com/ArduPilot/ardupilot", type: "GitHub" }
+            { title: "PX4 Autopilot GitHub Repository", url: "https://github.com/PX4/PX4-Autopilot", type: "GitHub" },
+            { title: "ArduPilot Autopilot Codebase", url: "https://github.com/ArduPilot/ardupilot", type: "GitHub" }
           ],
           checklist: [
             "Build PX4 firmware targets for `px4_fmu-v5_default` from source.",
@@ -178,11 +178,11 @@ const DRONE_ROADMAP_DATA = {
             "Body Frame (FRD/FLU) to Inertial Frame (NED/ENU) conversions",
             "Quaternion Algebra: Multiplication, inverse, rotation matrices",
             "Eliminating Gimbal Lock in 3D Attitude Representations",
-            "Newton-Euler Equations of Motion for 6-DOF Quadrotor Dynamics"
+            "Newton-Euler 6-DOF non-linear equations of motion"
           ],
           resources: [
             { title: "Quadrotor Dynamics & Control (ETH Zurich Publications)", url: "https://ethz.ch", type: "Paper" },
-            { title: "PythonRobotics Dynamic Quadrotor Simulator", url: "https://github.com/PythonRobotics", type: "GitHub" }
+            { title: "PythonRobotics Dynamic Quadrotor Simulator", url: "https://github.com/PythonRobotics/PythonRobotics", type: "GitHub" }
           ],
           checklist: [
             "Derive rotation transformation matrix from Body to Inertial frame.",
@@ -221,7 +221,7 @@ const DRONE_ROADMAP_DATA = {
           topics: [
             "Sensor Error Models: Gaussian white noise, random walk, bias drift",
             "Complementary & Madgwick Filters vs Extended Kalman Filter",
-            "PX4 EKF2 Architecture: 24-state vector (Position, Velocity, Attitude, Gyro/Accel Bias)",
+            "PX4 ECL EKF2 Architecture: 24-state vector (Position, Velocity, Attitude, IMU Bias)",
             "Handling GNSS outages, magnetometer anomalies, and optical flow fallback"
           ],
           resources: [
@@ -302,7 +302,7 @@ const DRONE_ROADMAP_DATA = {
           ],
           resources: [
             { title: "PX4 ROS 2 Communication Architecture", url: "https://docs.px4.io/main/en/ros/ros2_comm.html", type: "Docs" },
-            { title: "px4_ros_com & px4_msgs Repositories (1.2k ★)", url: "https://github.com/PX4/px4_ros_com", type: "GitHub" }
+            { title: "px4_ros_com & px4_msgs Repositories", url: "https://github.com/PX4/px4_ros_com", type: "GitHub" }
           ],
           checklist: [
             "Execute Micro XRCE-DDS Agent on companion computer.",
@@ -329,7 +329,7 @@ const DRONE_ROADMAP_DATA = {
           topics: [
             "Stereo Depth Cameras (Intel RealSense D435i, OAK-D, ZED 2i)",
             "VIO Estimator Frameworks: OpenVINS, ROVIO, VINS-Fusion",
-            "Feature extraction & optical flow tracking (FAST, KLT tracker)",
+            "Feature extraction & optical flow tracking (FAST corners, KLT tracker)",
             "Fusing VIO estimates back into PX4 EKF2 as vision position targets"
           ],
           resources: [
@@ -344,7 +344,7 @@ const DRONE_ROADMAP_DATA = {
         },
         {
           id: "p5-node-2",
-          title: "3D SLAM & Occupancy Mapping",
+          title: "3D SLAM & Volumetric Occupancy Mapping",
           difficulty: "Advanced",
           time: "4 Weeks",
           description: "Building 3D volumetric maps of unknown environments using LiDAR point clouds and stereo vision.",
@@ -373,7 +373,7 @@ const DRONE_ROADMAP_DATA = {
           topics: [
             "Path Search Algorithms: A*, Dijkstra, RRT* (Rapidly-exploring Random Trees)",
             "Minimum Snap Trajectory Optimization & B-spline representations",
-            "Dynamic Obstacle Avoidance: EGO-Planner & PX4 Avoidance package",
+            "Dynamic Obstacle Avoidance: EGO-Planner and PX4 Avoidance package",
             "Safety corridor constraints & velocity feasibility checks"
           ],
           resources: [
@@ -405,7 +405,7 @@ const DRONE_ROADMAP_DATA = {
           topics: [
             "PX4 SITL (Software-In-The-Loop) with Gazebo Garden / Harmonic",
             "Creating custom SDF / URDF drone models with rotor plugins & sensors",
-            "Simulating wind gusts, sensor noise, GPS dropouts, and motor failures",
+            "Simulating sensor noise, wind gusts, and motor failures",
             "HITL (Hardware-In-The-Loop) testing with physical flight controller"
           ],
           resources: [
@@ -473,7 +473,6 @@ const DRONE_ROADMAP_DATA = {
       category: "Software & Firmware",
       difficulty: "Advanced",
       type: "C++",
-      stars: "28.5k",
       langColor: "#f34b7d",
       url: "https://github.com/PX4/PX4-Autopilot",
       description: "Industry-standard open-source flight control software stack for drones and autonomous aircraft.",
@@ -485,7 +484,6 @@ const DRONE_ROADMAP_DATA = {
       category: "Software & Firmware",
       difficulty: "Advanced",
       type: "C++",
-      stars: "12.2k",
       langColor: "#f34b7d",
       url: "https://github.com/ArduPilot/ardupilot",
       description: "Versatile open-source autopilot software supporting multirotors, fixed-wings, VTOLs, and ground rovers.",
@@ -497,7 +495,6 @@ const DRONE_ROADMAP_DATA = {
       category: "Protocols & Hardware",
       difficulty: "Intermediate",
       type: "C / C++",
-      stars: "6.4k",
       langColor: "#f34b7d",
       url: "https://github.com/mavlink/mavlink",
       description: "Lightweight header-only message marshaling protocol for micro air vehicles and ground control stations.",
@@ -509,9 +506,8 @@ const DRONE_ROADMAP_DATA = {
       category: "Autonomy & AI",
       difficulty: "Intermediate",
       type: "C++ / Python",
-      stars: "4.8k",
       langColor: "#22314E",
-      url: "https://docs.ros.org/en/humble/",
+      url: "https://github.com/ros2/ros2",
       description: "Robot Operating System for building modular, multi-threaded autonomous robotics applications.",
       tags: ["ROS 2", "Robotics", "DDS", "Micro-ROS"]
     },
@@ -521,9 +517,8 @@ const DRONE_ROADMAP_DATA = {
       category: "Tools & Software",
       difficulty: "Intermediate",
       type: "C++",
-      stars: "3.9k",
       langColor: "#f34b7d",
-      url: "https://gazebosim.org/home",
+      url: "https://github.com/gazebosim/gz-sim",
       description: "High-fidelity 3D physics simulator for autonomous vehicles, drones, and sensor emulation.",
       tags: ["Gazebo", "Physics", "SITL", "URDF"]
     },
@@ -533,9 +528,8 @@ const DRONE_ROADMAP_DATA = {
       category: "Autonomy & AI",
       difficulty: "Advanced",
       type: "C++",
-      stars: "2.1k",
       langColor: "#f34b7d",
-      url: "https://github.com/udel-arsg/open_vins",
+      url: "https://github.com/rpng/open_vins",
       description: "Filter-based visual-inertial state estimator for high-precision GPS-denied drone positioning.",
       tags: ["VIO", "Camera", "IMU", "EKF"]
     },
@@ -545,7 +539,6 @@ const DRONE_ROADMAP_DATA = {
       category: "Autonomy & AI",
       difficulty: "Advanced",
       type: "C++",
-      stars: "3.5k",
       langColor: "#f34b7d",
       url: "https://github.com/ZJU-FAST-Lab/ego-planner",
       description: "Lightweight gradient-based local trajectory planner for quadrotors in dense unknown environments.",
@@ -557,7 +550,6 @@ const DRONE_ROADMAP_DATA = {
       category: "Tools & Software",
       difficulty: "Beginner",
       type: "C++",
-      stars: "5.1k",
       langColor: "#f34b7d",
       url: "https://github.com/facontidavide/PlotJuggler",
       description: "Essential desktop application for visualizing time-series telemetry logs, ROS topics, and ULog data.",
