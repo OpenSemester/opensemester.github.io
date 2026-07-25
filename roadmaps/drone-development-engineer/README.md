@@ -1,4 +1,4 @@
-# 🚁 Drone Development Engineer Roadmap
+# Drone Development Engineer Roadmap
 
 > **An open-source, step-by-step master learning path from flight physics to ROS 2 autonomous systems.**
 
@@ -8,7 +8,7 @@ License: MIT
 
 ---
 
-## 📌 Roadmap Overview
+## Roadmap Overview
 
 Drone Development Engineering combines **multirotor aerodynamics**, **high-current electrical systems**, **bare-metal / RTOS embedded firmware (C/C++)**, **control loop mathematics**, **sensor fusion (EKF2)**, **onboard Linux companion computers**, **ROS 2 autonomy**, and **3D SLAM perception**.
 
@@ -48,7 +48,7 @@ This roadmap provides a structured 6-phase master curriculum designed for studen
 
 ---
 
-## 🎓 Prerequisites
+## Prerequisites
 
 Before starting this roadmap, you should have foundational knowledge of:
 - **Programming**: Basic C/C++ (pointers, memory management, data structures) and Python 3.
@@ -57,9 +57,9 @@ Before starting this roadmap, you should have foundational knowledge of:
 
 ---
 
-## 🧭 Curriculum Breakdown
+## Curriculum Breakdown
 
-### 🔹 Phase 1: Fundamentals & Hardware Engineering
+### Phase 1: Fundamentals & Hardware Engineering
 - **1.1 Multirotor Aerodynamics & Kinematics**
   - Center of Gravity (CG) and moment of inertia tensor calculations.
   - Propeller aerodynamics: Pitch, diameter, thrust curves, static vs dynamic efficiency ($g/W$).
@@ -75,7 +75,7 @@ Before starting this roadmap, you should have foundational knowledge of:
   - GNSS Receivers: NMEA 0183, UBX protocol, u-blox F9P sub-centimeter RTK positioning.
   - Optical flow sensors and Time-of-Flight (ToF) rangefinders.
 
-### 🔹 Phase 2: Embedded C/C++ & Flight Controller Firmware
+### Phase 2: Embedded C/C++ & Flight Controller Firmware
 - **2.1 STM32 Microcontrollers & Peripheral Bus Drivers**
   - ARM Cortex-M4 / Cortex-M7 architectures and register-level programming.
   - Peripheral communication buses: SPI DMA for IMUs, I2C for barometers, UART for telemetry, CAN FD for DroneCAN.
@@ -91,7 +91,7 @@ Before starting this roadmap, you should have foundational knowledge of:
   - Microservices: Waypoint Mission Protocol & Parameter Protocol.
   - Software SDKs: `pymavlink`, MAVSDK (C++ / Python).
 
-### 🔹 Phase 3: Control Systems & Sensor Fusion Math
+### Phase 3: Control Systems & Sensor Fusion Math
 - **3.1 Quadrotor Dynamics & Kinematic Frames**
   - Coordinate transformations: Body Frame (FRD/FLU) $\leftrightarrow$ Inertial Frame (NED/ENU).
   - Quaternion algebra: Multiplication, conjugation, Euler angle conversions (Roll, Pitch, Yaw).
@@ -106,7 +106,7 @@ Before starting this roadmap, you should have foundational knowledge of:
   - PX4 ECL EKF2 architecture: 24-state vector (Position, Velocity, Attitude, IMU Bias).
   - Robust handling of GNSS dropouts, compass anomalies, and optical flow fallbacks.
 
-### 🔹 Phase 4: Companion Computers & ROS 2 Autonomy
+### Phase 4: Companion Computers & ROS 2 Autonomy
 - **4.1 Linux Single Board Computers (SBCs)**
   - NVIDIA Jetson Orin Nano / Xavier & Raspberry Pi 5 setup.
   - Ubuntu Server PREEMPT_RT real-time kernel compilation.
@@ -120,7 +120,7 @@ Before starting this roadmap, you should have foundational knowledge of:
   - Offboard control mode entry: `OffboardControlMode` & `TrajectorySetpoint`.
   - Vehicle commands: Arm, Disarm, Takeoff, Land, Return-to-Launch (RTL).
 
-### 🔹 Phase 5: Perception, Computer Vision & SLAM
+### Phase 5: Perception, Computer Vision & SLAM
 - **5.1 Visual-Inertial Odometry (VIO)**
   - Stereo depth cameras (Intel RealSense D435i, OAK-D, ZED 2i).
   - VIO algorithms: OpenVINS, ROVIO, VINS-Fusion.
@@ -134,7 +134,7 @@ Before starting this roadmap, you should have foundational knowledge of:
   - Minimum Snap Trajectory Generation with polynomial B-spline optimizations.
   - Real-time obstacle avoidance: EGO-Planner and PX4 Avoidance package.
 
-### 🔹 Phase 6: Simulation, Flight Testing & Standards
+### Phase 6: Simulation, Flight Testing & Standards
 - **6.1 Gazebo Harmonic & AirSim SITL Simulation**
   - Software-In-The-Loop (SITL) testing with Gazebo Garden / Harmonic.
   - Custom SDF / URDF robot models with rotor dynamics plugins.
@@ -148,7 +148,7 @@ Before starting this roadmap, you should have foundational knowledge of:
 
 ---
 
-## 🛠 Recommended Stack Matrix
+## Recommended Stack Matrix
 
 | Category | Recommended Technologies / Libraries |
 | :--- | :--- |
@@ -164,23 +164,23 @@ Before starting this roadmap, you should have foundational knowledge of:
 
 ---
 
-## 🔗 Key Open Source Repositories
+## Key Open Source Repositories
 
-- 🚁 **[PX4/PX4-Autopilot](https://github.com/PX4/PX4-Autopilot)** — Industry-standard flight stack (28.5k ★).
-- ✈️ **[ArduPilot/ardupilot](https://github.com/ArduPilot/ardupilot)** — Flexible open-source autopilot stack (12.2k ★).
-- 🛰️ **[mavlink/mavlink](https://github.com/mavlink/mavlink)** — Micro air vehicle serial communication protocol (6.4k ★).
-- 🤖 **[PX4/px4_ros_com](https://github.com/PX4/px4_ros_com)** — ROS 2 offboard communication package (1.2k ★).
-- 📷 **[udel-arsg/open_vins](https://github.com/udel-arsg/open_vins)** — Visual-inertial navigation system (2.1k ★).
-- 🗺️ **[ZJU-FAST-Lab/ego-planner](https://github.com/ZJU-FAST-Lab/ego-planner)** — Gradient-based quadrotor trajectory planner (3.5k ★).
+- **[PX4/PX4-Autopilot](https://github.com/PX4/PX4-Autopilot)** — Industry-standard flight stack.
+- **[ArduPilot/ardupilot](https://github.com/ArduPilot/ardupilot)** — Flexible open-source autopilot stack.
+- **[mavlink/mavlink](https://github.com/mavlink/mavlink)** — Micro air vehicle serial communication protocol.
+- **[PX4/px4_ros_com](https://github.com/PX4/px4_ros_com)** — ROS 2 offboard communication package.
+- **[rpng/open_vins](https://github.com/rpng/open_vins)** — Visual-inertial navigation system.
+- **[ZJU-FAST-Lab/ego-planner](https://github.com/ZJU-FAST-Lab/ego-planner)** — Gradient-based quadrotor trajectory planner.
 
 ---
 
-## 👥 How to Track Progress
+## How to Track Progress
 
 Use the interactive web application at **[https://opensemester.github.io/drone-engineer.html](https://opensemester.github.io/drone-engineer.html)** to click through roadmap nodes, view curated code repos, and mark off items on your personal milestone checklist.
 
 ---
 
-## 📄 License
+## License
 
 This roadmap is open-source and released under the **MIT License**. Contributions are welcome!

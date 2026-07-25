@@ -3,16 +3,16 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>OpenSemester — Open Source Engineering Roadmaps</title>
-  <meta name="description" content="Open-source, community-curated technical roadmaps and resource guides for specialized engineering domains. Flagship: Drone Development Engineer.">
+  <title>OpenSemester — Open Source Engineering Roadmaps for Undergraduate Students</title>
+  <meta name="description" content="Open-source community platform for undergraduate engineering students. Structured roadmaps, academic specs, and curated learning resources across CS, EEE, Robotics, and Embedded Systems.">
   <link rel="stylesheet" href="css/main.css">
   <link rel="stylesheet" href="css/resources.css">
 </head>
 <body>
 
-  <!-- Top Announcement Bar -->
+  <!-- Announcement Bar -->
   <div class="announcement-bar">
-    <span>🚀 OpenSemester v1.0 Released — Featuring the </span>
+    <span>OpenSemester v1.0 • Featured Resource: </span>
     <a href="drone-engineer.html">Drone Development Engineer Roadmap →</a>
   </div>
 
@@ -24,20 +24,20 @@
           <svg width="24" height="24" viewBox="0 0 24 24"><path fill="var(--accent-blue)" d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
           OpenSemester
         </a>
-        <span class="repo-badge">Public</span>
+        <span class="repo-badge">Undergrad Hub</span>
       </div>
 
       <ul class="nav-menu">
         <li class="nav-item"><a href="index.html" class="active">Home</a></li>
         <li class="nav-item"><a href="#roadmaps">Roadmaps</a></li>
         <li class="nav-item"><a href="drone-engineer.html">Drone Engineer</a></li>
-        <li class="nav-item"><a href="#resources">Resources</a></li>
+        <li class="nav-item"><a href="#resources">Resource Catalog</a></li>
       </ul>
 
       <div class="nav-actions">
         <div class="search-palette">
           <svg width="14" height="14" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
-          <input type="text" id="search-input" placeholder="Search roadmaps, topics...">
+          <input type="text" id="search-input" placeholder="Search roadmaps, subjects...">
           <span class="kbd-shortcut">/</span>
         </div>
         <a href="https://github.com/OpenSemester/opensemester.github.io" target="_blank" rel="noopener" class="btn-github-star" id="nav-github-star">
@@ -48,36 +48,41 @@
     </div>
   </nav>
 
-  <!-- Developer Hero Header -->
+  <!-- Undergraduate Hero Header -->
   <header class="dev-hero">
     <div class="container">
       <div class="hero-repo-header">
         <a href="https://github.com/OpenSemester">OpenSemester</a>
         <span>/</span>
-        <strong>roadmaps</strong>
+        <strong>undergraduate-roadmaps</strong>
       </div>
       <h1 class="dev-hero-title">
-        Open-Source Community Roadmaps<br>
-        for Autonomous & Embedded Engineering.
+        Open-Source Learning Platform<br>
+        for Undergraduate Engineering Students.
       </h1>
       <p class="dev-hero-desc">
-        Structured step-by-step master paths, codebase specifications, and curated developer resources — community-maintained for engineers.
+        Community-curated career paths, subject roadmaps, project specifications, and academic learning resources — built to empower undergraduate engineering & computer science students worldwide.
       </p>
 
       <!-- Terminal / CLI Preview Widget -->
       <div class="cli-widget">
         <div class="cli-header">
-          <span>bash — gh cli</span>
+          <span>bash — git clone</span>
           <span>open-source</span>
         </div>
         <div class="cli-body">
-          <code>$ gh repo clone OpenSemester/drone-development-roadmap</code>
-          <button class="btn-copy-cmd" title="Copy command" onclick="navigator.clipboard.writeText('gh repo clone OpenSemester/drone-development-roadmap')">📋</button>
+          <code>$ gh repo clone OpenSemester/opensemester.github.io</code>
+          <button class="btn-copy-cmd" title="Copy command" onclick="navigator.clipboard.writeText('gh repo clone OpenSemester/opensemester.github.io')">
+            <svg width="14" height="14" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"/></svg>
+          </button>
         </div>
       </div>
 
       <!-- Stats Strip -->
       <div class="stats-strip">
+        <div class="stat-item">
+          <strong>Undergrad</strong> CS / EEE / Robotics / Mech
+        </div>
         <div class="stat-item">
           <strong>24</strong> Mastery Modules
         </div>
@@ -85,10 +90,7 @@
           <strong>6</strong> Core Phases
         </div>
         <div class="stat-item">
-          <strong>30+</strong> Open Repos & Specs
-        </div>
-        <div class="stat-item">
-          <strong>MIT</strong> Open License
+          <strong>MIT</strong> Free & Open Source
         </div>
       </div>
     </div>
@@ -99,24 +101,24 @@
     <section id="roadmaps">
       <div class="section-heading">
         <div>
-          <h2>Available Engineering Roadmaps</h2>
-          <p>Community-curated paths with milestone checklists and code repositories.</p>
+          <h2>Undergraduate Specialization Roadmaps</h2>
+          <p>Structured master learning paths with milestone checklists, books, and code repositories.</p>
         </div>
       </div>
 
       <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 1rem;">
         
-        <!-- Flagship: Drone Development Engineer -->
+        <!-- Featured Resource: Drone Development Engineer -->
         <div class="repo-card" style="grid-column: 1 / -1; border-color: var(--accent-blue);">
           <div>
             <div class="repo-card-top">
               <h3 class="repo-card-title">
                 <a href="drone-engineer.html">drone-development-engineer</a>
               </h3>
-              <span class="repo-badge-pill featured">★ Flagship Roadmap</span>
+              <span class="repo-badge-pill featured">Featured Resource</span>
             </div>
             <p class="repo-card-desc">
-              Complete engineering path spanning multirotor aerodynamics, PX4/ArduPilot C++ firmware, cascaded PID loops, 24-state EKF2 sensor fusion, ROS 2 companion autonomy, and 3D SLAM visual navigation.
+              Complete multi-disciplinary engineering path for undergraduate students spanning multirotor aerodynamics, STM32 C++ firmware, cascaded PID control loops, 24-state EKF2 sensor fusion, ROS 2 companion autonomy, and 3D SLAM visual navigation.
             </p>
             <div class="repo-card-meta">
               <span><span class="lang-dot lang-cpp"></span>C++ / Python / ROS 2</span>
@@ -127,12 +129,12 @@
           </div>
           <div style="margin-top: 1.5rem;">
             <a href="drone-engineer.html" class="btn btn-primary">
-              View Drone Roadmap & Resources →
+              Explore Drone Engineering Roadmap →
             </a>
           </div>
         </div>
 
-        <!-- Robotics Systems Engineer -->
+        <!-- Robotics & Mechatronics Engineer -->
         <div class="repo-card">
           <div>
             <div class="repo-card-top">
@@ -142,7 +144,7 @@
               <span class="repo-badge-pill dev">Under Review</span>
             </div>
             <p class="repo-card-desc">
-              Forward/inverse kinematics, MoveIt 2 manipulation, URDF modeling, Gazebo physics simulation, and ROS 2 hardware interfaces.
+              Forward/inverse kinematics, MoveIt 2 manipulation, URDF robot modeling, Gazebo physics simulation, and ROS 2 hardware control interfaces.
             </p>
             <div class="repo-card-meta">
               <span><span class="lang-dot lang-ros"></span>C++ / ROS 2</span>
@@ -150,16 +152,16 @@
             </div>
           </div>
           <div style="margin-top: 1.25rem;">
-            <span class="btn btn-secondary" style="opacity: 0.6;">PR Pending</span>
+            <span class="btn btn-secondary" style="opacity: 0.65; cursor: not-allowed;">In Development</span>
           </div>
         </div>
 
-        <!-- Embedded Firmware Engineer -->
+        <!-- Embedded Systems & IoT Engineer -->
         <div class="repo-card">
           <div>
             <div class="repo-card-top">
               <h3 class="repo-card-title">
-                <a href="#">embedded-firmware-engineer</a>
+                <a href="#">embedded-systems-engineer</a>
               </h3>
               <span class="repo-badge-pill dev">Under Review</span>
             </div>
@@ -172,7 +174,29 @@
             </div>
           </div>
           <div style="margin-top: 1.25rem;">
-            <span class="btn btn-secondary" style="opacity: 0.6;">PR Pending</span>
+            <span class="btn btn-secondary" style="opacity: 0.65; cursor: not-allowed;">In Development</span>
+          </div>
+        </div>
+
+        <!-- AI & Autonomous Systems -->
+        <div class="repo-card">
+          <div>
+            <div class="repo-card-top">
+              <h3 class="repo-card-title">
+                <a href="#">ai-autonomous-systems</a>
+              </h3>
+              <span class="repo-badge-pill dev">Under Review</span>
+            </div>
+            <p class="repo-card-desc">
+              Computer vision, PyTorch deep learning, CUDA GPU acceleration, point cloud processing, and reinforcement learning for robotics.
+            </p>
+            <div class="repo-card-meta">
+              <span><span class="lang-dot lang-python"></span>Python / PyTorch</span>
+              <span>18 Modules</span>
+            </div>
+          </div>
+          <div style="margin-top: 1.25rem;">
+            <span class="btn btn-secondary" style="opacity: 0.65; cursor: not-allowed;">In Development</span>
           </div>
         </div>
 
@@ -183,7 +207,7 @@
     <section id="resources" style="margin-top: 3.5rem;">
       <div class="section-heading">
         <div>
-          <h2>Curated Developer Resource Catalog</h2>
+          <h2>Undergraduate Academic Resource Catalog</h2>
           <p>Handpicked open-source repositories, developer documentation, and simulators.</p>
         </div>
       </div>
@@ -208,7 +232,7 @@
   <footer class="footer">
     <div class="container footer-inner">
       <div>
-        <p><strong>OpenSemester</strong> — Open-source community engineering roadmaps.</p>
+        <p><strong>OpenSemester</strong> — Open-source community engineering platform for undergraduate students.</p>
         <p style="margin-top: 4px; color: var(--text-tertiary);">Hosted on GitHub Pages • MIT License</p>
       </div>
       <ul class="footer-links">

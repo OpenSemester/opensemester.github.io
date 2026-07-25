@@ -392,13 +392,15 @@ body {
 
 .repo-card-top {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   justify-content: space-between;
+  gap: 12px;
   margin-bottom: 0.75rem;
+  flex-wrap: wrap;
 }
 
 .repo-card-title {
-  font-size: 1.15rem;
+  font-size: 1.1rem;
   font-weight: 700;
   display: flex;
   align-items: center;
@@ -421,6 +423,8 @@ body {
   border-radius: var(--radius-full);
   border: 1px solid var(--border-default);
   font-weight: 600;
+  white-space: nowrap;
+  flex-shrink: 0;
 }
 
 .repo-badge-pill.featured {
