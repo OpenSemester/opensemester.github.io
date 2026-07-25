@@ -1,0 +1,33 @@
+name: CI Dataset & Code Quality Validation
+
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+    branches: [ main, master ]
+
+jobs:
+  validate-json:
+    name: Validate JSON Datasets
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+
+      - name: Validate JSON Files Syntax
+        run: |
+          python -m json.tool data/resources.json > /dev/null
+          python -m json.tool data/roadmaps/index.json > /dev/null
+          python -m json.tool data/roadmaps/drone-development-engineer.json > /dev/null
+          echo "All JSON datasets are valid syntax."
+
+      - name: Verify HTML Files Exist
+        run: |
+          test -f index.html || exit 1
+          test -f drone-engineer.html || exit 1
+          echo "All HTML files present."

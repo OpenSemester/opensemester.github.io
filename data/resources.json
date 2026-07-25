@@ -1,0 +1,90 @@
+[
+  {
+    "id": "res-1",
+    "title": "PX4/PX4-Autopilot",
+    "category": "Software & Firmware",
+    "difficulty": "Advanced",
+    "type": "C++",
+    "langColor": "#f34b7d",
+    "url": "https://github.com/PX4/PX4-Autopilot",
+    "description": "Industry-standard open-source flight control software stack for drones and autonomous aircraft.",
+    "tags": ["C++", "NuttX", "Autopilot", "Flight-Stack"]
+  },
+  {
+    "id": "res-2",
+    "title": "ArduPilot/ardupilot",
+    "category": "Software & Firmware",
+    "difficulty": "Advanced",
+    "type": "C++",
+    "langColor": "#f34b7d",
+    "url": "https://github.com/ArduPilot/ardupilot",
+    "description": "Versatile open-source autopilot software supporting multirotors, fixed-wings, VTOLs, and ground rovers.",
+    "tags": ["C++", "AP_HAL", "Autopilot", "Firmware"]
+  },
+  {
+    "id": "res-3",
+    "title": "mavlink/mavlink",
+    "category": "Protocols & Hardware",
+    "difficulty": "Intermediate",
+    "type": "C / C++",
+    "langColor": "#f34b7d",
+    "url": "https://github.com/mavlink/mavlink",
+    "description": "Lightweight header-only message marshaling protocol for micro air vehicles and ground control stations.",
+    "tags": ["MAVLink", "Telemetry", "Protocol", "Serial"]
+  },
+  {
+    "id": "res-4",
+    "title": "ros2/ros2",
+    "category": "Autonomy & AI",
+    "difficulty": "Intermediate",
+    "type": "C++ / Python",
+    "langColor": "#22314E",
+    "url": "https://github.com/ros2/ros2",
+    "description": "Robot Operating System for building modular, multi-threaded autonomous robotics applications.",
+    "tags": ["ROS 2", "Robotics", "DDS", "Micro-ROS"]
+  },
+  {
+    "id": "res-5",
+    "title": "gazebosim/gz-sim",
+    "category": "Tools & Software",
+    "difficulty": "Intermediate",
+    "type": "C++",
+    "langColor": "#f34b7d",
+    "url": "https://github.com/gazebosim/gz-sim",
+    "description": "High-fidelity 3D physics simulator for autonomous vehicles, drones, and sensor emulation.",
+    "tags": ["Gazebo", "Physics", "SITL", "URDF"]
+  },
+  {
+    "id": "res-6",
+    "title": "rpng/open_vins",
+    "category": "Autonomy & AI",
+    "difficulty": "Advanced",
+    "type": "C++",
+    "langColor": "#f34b7d",
+    "url": "https://github.com/rpng/open_vins",
+    "description": "Filter-based visual-inertial state estimator for high-precision GPS-denied drone positioning.",
+    "tags": ["VIO", "Camera", "IMU", "EKF"]
+  },
+  {
+    "id": "res-7",
+    "title": "ZJU-FAST-Lab/ego-planner",
+    "category": "Autonomy & AI",
+    "difficulty": "Advanced",
+    "type": "C++",
+    "langColor": "#f34b7d",
+    "url": "https://github.com/ZJU-FAST-Lab/ego-planner",
+    "description": "Lightweight gradient-based local trajectory planner for quadrotors in dense unknown environments.",
+    "tags": ["Path-Planning", "Avoidance", "B-spline"]
+  },
+  {
+    "id": "res-8",
+    "title": "facontidavide/PlotJuggler",
+    "category": "Tools & Software",
+    "difficulty": "Beginner",
+    "type": "C++",
+    "langColor": "#f34b7d",
+    "url": "https://github.com/facontidavide/PlotJuggler",
+    "description": "Essential desktop application for visualizing time-series telemetry logs, ROS topics, and ULog data.",
+    "tags": ["Analytics", "Logging", "Visualizer"]
+  }
+]

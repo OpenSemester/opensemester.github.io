@@ -1,0 +1,58 @@
+[
+  {
+    "id": "drone-development-engineer",
+    "title": "drone-development-engineer",
+    "status": "Featured Roadmap",
+    "statusClass": "featured",
+    "description": "Complete multi-disciplinary engineering path for undergraduate students spanning multirotor aerodynamics, STM32 C++ firmware, cascaded PID control loops, 24-state EKF2 sensor fusion, ROS 2 companion autonomy, and 3D SLAM visual navigation.",
+    "tech": "C++ / Python / ROS 2",
+    "langDot": "lang-cpp",
+    "modules": 24,
+    "phases": 6,
+    "duration": "Est. 6-9 Months",
+    "url": "drone-engineer.html",
+    "jsonPath": "data/roadmaps/drone-development-engineer.json"
+  },
+  {
+    "id": "robotics-systems-engineer",
+    "title": "robotics-systems-engineer",
+    "status": "Under Review",
+    "statusClass": "dev",
+    "description": "Forward/inverse kinematics, MoveIt 2 manipulation, URDF robot modeling, Gazebo physics simulation, and ROS 2 hardware control interfaces.",
+    "tech": "C++ / ROS 2",
+    "langDot": "lang-ros",
+    "modules": 20,
+    "phases": 5,
+    "duration": "Est. 5-7 Months",
+    "url": "#",
+    "jsonPath": "data/roadmaps/robotics-systems-engineer.json"
+  },
+  {
+    "id": "embedded-systems-engineer",
+    "title": "embedded-systems-engineer",
+    "status": "Under Review",
+    "statusClass": "dev",
+    "description": "Bare-metal C/C++, ARM Cortex-M microcontrollers, FreeRTOS task scheduling, DMA peripherals, and hardware logic analyzer debugging.",
+    "tech": "C / Assembly",
+    "langDot": "lang-cpp",
+    "modules": 22,
+    "phases": 6,
+    "duration": "Est. 6-8 Months",
+    "url": "#",
+    "jsonPath": "data/roadmaps/embedded-systems-engineer.json"
+  },
+  {
+    "id": "ai-autonomous-systems",
+    "title": "ai-autonomous-systems",
+    "status": "Under Review",
+    "statusClass": "dev",
+    "description": "Computer vision, PyTorch deep learning, CUDA GPU acceleration, point cloud processing, and reinforcement learning for robotics.",
+    "tech": "Python / PyTorch",
+    "langDot": "lang-python",
+    "modules": 18,
+    "phases": 5,
+    "duration": "Est. 4-6 Months",
+    "url": "#",
+    "jsonPath": "data/roadmaps/ai-autonomous-systems.json"
+  }
+]

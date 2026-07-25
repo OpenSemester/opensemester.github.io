@@ -1,0 +1,42 @@
+name: 📚 Submit a New Resource
+description: Propose an open-source repository, documentation, or tool for the OpenSemester Resource Catalog.
+labels: ["resource-submission", "triage"]
+body:
+  - type: input
+    id: title
+    attributes:
+      label: Resource Title / Repository Name
+      description: e.g. "PX4/PX4-Autopilot" or "ROS 2 Humble Documentation"
+      placeholder: owner/repository
+    validations:
+      required: true
+
+  - type: input
+    id: url
+    attributes:
+      label: Resource URL
+      description: Must be a valid HTTP/HTTPS link to GitHub, docs, paper, or tool.
+      placeholder: https://github.com/owner/repository
+    validations:
+      required: true
+
+  - type: dropdown
+    id: category
+    attributes:
+      label: Resource Category
+      options:
+        - Software & Firmware
+        - Autonomy & AI
+        - Tools & Software
+        - Protocols & Hardware
+        - Theory & Papers
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Resource Description
+      description: Brief 1-2 sentence overview of why this resource is useful for undergraduate engineering students.
+    validations:
+      required: true
