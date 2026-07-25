@@ -3,24 +3,25 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>OpenSemester — Open Source Engineering Roadmaps for Undergraduate Students</title>
-  <meta name="description" content="Open-source community platform for undergraduate engineering students. Structured roadmaps, academic specs, and curated learning resources across CS, EEE, Robotics, and Embedded Systems.">
-  <link rel="stylesheet" href="css/main.css">
-  <link rel="stylesheet" href="css/learning-path.css">
+  <title>Drone Development Engineer Roadmap — OpenSemester</title>
+  <meta name="description" content="Open-source master learning path for Drone Development Engineering: Aerodynamics, PX4/ArduPilot C++, EKF2 state estimation, ROS 2, and 3D SLAM.">
+  <link rel="stylesheet" href="../../css/main.css">
+  <link rel="stylesheet" href="../../css/roadmap.css">
+  <link rel="stylesheet" href="../../css/learning-path.css">
 </head>
 <body>
 
   <!-- Announcement Bar -->
   <div class="announcement-bar">
-    <span>OpenSemester v1.0 • 6 Modules, 1 Supervised Capstone: </span>
-    <a href="roadmaps/drone-development-engineer/">Drone Development Engineer →</a>
+    <span>OpenSemester Supervised Capstone • </span>
+    <a href="https://github.com/OpenSemester" target="_blank">Edit on GitHub ↗</a>
   </div>
 
   <!-- Navbar -->
   <nav class="navbar">
     <div class="container nav-container">
       <div class="brand-wrapper">
-        <a href="index.html" class="brand-logo">
+        <a href="../../index.html" class="brand-logo">
           <svg width="24" height="24" viewBox="0 0 24 24"><path fill="var(--accent-blue)" d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
           OpenSemester
         </a>
@@ -28,10 +29,10 @@
       </div>
 
       <ul class="nav-menu">
-        <li class="nav-item"><a href="index.html" class="active">Home</a></li>
-        <li class="nav-item"><a href="#learning-path">Learning Path</a></li>
-        <li class="nav-item"><a href="roadmaps/drone-development-engineer/">Drone Engineer</a></li>
-        <li class="nav-item"><a href="CONTRIBUTING.md" target="_blank">Contribute</a></li>
+        <li class="nav-item"><a href="../../index.html">Home</a></li>
+        <li class="nav-item"><a href="../../index.html#learning-path">Learning Path</a></li>
+        <li class="nav-item"><a href="">Drone Engineer</a></li>
+        <li class="nav-item"><a href="../../CONTRIBUTING.md" target="_blank">Contribute</a></li>
       </ul>
 
       <div class="nav-actions">
@@ -48,62 +49,67 @@
     </div>
   </nav>
 
-  <!-- Hero -->
-  <header class="dev-hero">
-    <div class="container">
-      <div class="hero-repo-header">
-        <a href="https://github.com/OpenSemester">OpenSemester</a>
-        <span>/</span>
-        <strong>undergraduate-roadmaps</strong>
-      </div>
-      <h1 class="dev-hero-title">
-        Open-Source Learning Platform<br>
-        for Undergraduate Engineering Students.
-      </h1>
-      <p class="dev-hero-desc">
-        Community-curated structured roadmaps, open-source project specifications, and academic learning resources — built to empower undergraduate engineering &amp; computer science students worldwide. All roadmaps lead to a supervised capstone.
-      </p>
+  <!-- Main Container -->
+  <main class="container">
+    
+    <!-- Header Card -->
+    <div class="roadmap-header-card">
+      <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 1.5rem;">
+        <div>
+          <div class="breadcrumb-nav">
+            <a href="../../index.html">OpenSemester</a>
+            <span>/</span>
+            <a href="../../index.html#learning-path">learning-path</a>
+            <span>/</span>
+            <span style="color: var(--text-primary);">drone-development-engineer</span>
+          </div>
 
-      <div class="cli-widget">
-        <div class="cli-header">
-          <span>bash — git clone</span>
-          <span>open-source • MIT License</span>
-        </div>
-        <div class="cli-body">
-          <code>$ gh repo clone OpenSemester/opensemester.github.io</code>
-          <button class="btn-copy-cmd" title="Copy command" onclick="navigator.clipboard.writeText('gh repo clone OpenSemester/opensemester.github.io').catch(function(){})">
-            <svg width="14" height="14" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"/></svg>
-          </button>
-        </div>
-      </div>
+          <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.5rem; margin-top: 0.75rem;">
+            <span style="background: rgba(88,166,255,0.15); border: 1px solid var(--accent-blue); color: var(--accent-blue); border-radius: 999px; padding: 2px 10px; font-size: 0.65rem; font-family: var(--font-mono); font-weight: 700; letter-spacing: 0.07em; text-transform: uppercase;">Supervised Capstone</span>
+            <span style="font-family: var(--font-mono); font-size: 0.7rem; color: var(--text-tertiary);">6 – 9 Months • 18 Modules</span>
+          </div>
 
-      <div class="stats-strip">
-        <div class="stat-item">
-          <strong>6</strong> Learning Modules
+          <h1 style="font-size: 2.2rem; font-weight: 800; margin-bottom: 8px;">
+            Drone Development Engineer Roadmap
+          </h1>
+          <p style="color: var(--text-secondary); max-width: 720px; font-size: 1.05rem; line-height: 1.5;">
+            The supervised capstone of the <strong>OpenSemester Drone Engineering Learning Path</strong>. Master aerodynamics, STM32 microcontrollers, PX4 C++ firmware, PID tuning, 24-state EKF2 sensor fusion, ROS 2 autonomy, and 3D SLAM vision.
+          </p>
+
+          <div style="display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap; margin-top: 0.875rem;">
+            <span style="font-size: 0.7rem; color: var(--text-tertiary); font-family: var(--font-mono);">Prerequisites:</span>
+            <span style="background: rgba(88,166,255,0.08); border: 1px solid rgba(88,166,255,0.25); color: var(--accent-blue); padding: 2px 8px; border-radius: 999px; font-family: var(--font-mono); font-size: 0.68rem;">Python Programming</span>
+            <span style="background: rgba(88,166,255,0.08); border: 1px solid rgba(88,166,255,0.25); color: var(--accent-blue); padding: 2px 8px; border-radius: 999px; font-family: var(--font-mono); font-size: 0.68rem;">Data Analysis</span>
+            <span style="background: rgba(88,166,255,0.08); border: 1px solid rgba(88,166,255,0.25); color: var(--accent-blue); padding: 2px 8px; border-radius: 999px; font-family: var(--font-mono); font-size: 0.68rem;">ML &amp; DL</span>
+            <span style="background: rgba(88,166,255,0.08); border: 1px solid rgba(88,166,255,0.25); color: var(--accent-blue); padding: 2px 8px; border-radius: 999px; font-family: var(--font-mono); font-size: 0.68rem;">Autonomous Drone Programming</span>
+          </div>
         </div>
-        <div class="stat-item">
-          <strong>1</strong> Supervised Capstone
-        </div>
-        <div class="stat-item">
-          <strong>MIT</strong> Free & Open Source
+
+        <!-- Progress Dashboard -->
+        <div class="dev-progress-card">
+          <div class="dev-progress-title">
+            <span>Milestones Completed</span>
+            <span id="progress-percent" style="color: var(--accent-green);">0%</span>
+          </div>
+          <div class="dev-progress-bar-bg">
+            <div class="dev-progress-bar-fill" id="progress-bar-fill"></div>
+          </div>
+          <div style="font-size: 11px; font-family: var(--font-mono); color: var(--text-tertiary); margin-top: 6px; text-align: right;">
+            <span id="completed-count">0</span> / <span id="total-count">0</span> Completed
+          </div>
         </div>
       </div>
     </div>
-  </header>
 
-  <main class="container">
-
-    <!-- Supervised Learning Path -->
-    <section id="learning-path">
-      <div class="section-heading">
+    <!-- Learning Path Tree -->
+    <section id="learning-path" style="margin-bottom: 3rem;">
+      <div class="section-heading" style="margin-bottom: 1.5rem;">
         <div>
-          <h2>Supervised Drone Engineering Learning Path</h2>
-          <p>A structured sequence of 6 modules leading to the <strong>Drone Development Engineer</strong> supervised capstone. Complete modules in order to build foundational skills.</p>
+          <h2 style="font-size: 1.25rem;">Supervised Drone Engineering Learning Path</h2>
+          <p style="font-size: 0.8rem;">Complete all prerequisite modules in sequence before starting the capstone phases below.</p>
         </div>
-        <a href="roadmaps/drone-development-engineer/" class="btn btn-primary">View Capstone Roadmap</a>
       </div>
 
-      <!-- Path Flow -->
       <div class="lp-flow">
 
         <!-- Step 1 -->
@@ -116,7 +122,7 @@
                 <h3 class="lp-card-title">python-programming</h3>
               </div>
               <div class="lp-card-meta">
-                <span>8 Modules</span>
+                <span>3 Modules</span>
                 <span>4 - 6 Weeks</span>
               </div>
             </div>
@@ -127,9 +133,9 @@
             <div class="lp-card-actions">
               <span class="lp-status active">
                 <svg width="8" height="8" viewBox="0 0 8 8"><circle cx="4" cy="4" r="4" fill="currentColor"/></svg>
-                Active
+                Phase 1
               </span>
-              <button class="btn btn-secondary btn-sm lp-coming-soon" title="Roadmap coming soon!">Coming Soon</button>
+              <button class="btn btn-secondary btn-sm" onclick="document.getElementById('roadmap-timeline').scrollIntoView({behavior:'smooth'})">View in Roadmap ↓</button>
             </div>
           </div>
         </div>
@@ -149,7 +155,7 @@
                 <h3 class="lp-card-title">data-analysis-using-python</h3>
               </div>
               <div class="lp-card-meta">
-                <span>10 Modules</span>
+                <span>3 Modules</span>
                 <span>5 - 7 Weeks</span>
               </div>
             </div>
@@ -162,7 +168,7 @@
                 <svg width="12" height="12" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
                 Requires: Python Programming
               </span>
-              <button class="btn btn-secondary btn-sm lp-coming-soon" title="Roadmap coming soon!">Coming Soon</button>
+              <span style="font-size:0.7rem; font-family:var(--font-mono); color:var(--text-tertiary);">Phase 2</span>
             </div>
           </div>
         </div>
@@ -182,7 +188,7 @@
                 <h3 class="lp-card-title">machine-learning-deep-learning</h3>
               </div>
               <div class="lp-card-meta">
-                <span>10 Modules</span>
+                <span>3 Modules</span>
                 <span>8 - 12 Weeks</span>
               </div>
             </div>
@@ -195,12 +201,12 @@
                 <svg width="12" height="12" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
                 Requires: Data Analysis
               </span>
-              <button class="btn btn-secondary btn-sm lp-coming-soon" title="Roadmap coming soon!">Coming Soon</button>
+              <span style="font-size:0.7rem; font-family:var(--font-mono); color:var(--text-tertiary);">Phase 3</span>
             </div>
           </div>
         </div>
 
-        <!-- Branch: Parallel Paths (GenAI + Autonomous Drone) -->
+        <!-- Branch -->
         <div class="lp-connector">
           <svg width="2" height="40" viewBox="0 0 2 40"><line x1="1" y1="0" x2="1" y2="40" stroke="var(--border-default)" stroke-width="2" stroke-dasharray="4 4"/></svg>
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--text-tertiary)"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
@@ -230,7 +236,7 @@
               <div class="lp-card-actions">
                 <span class="lp-prereq">
                   <svg width="12" height="12" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
-                  Requires: ML & DL
+                  Requires: ML &amp; DL
                 </span>
                 <button class="btn btn-secondary btn-sm lp-coming-soon" title="Roadmap coming soon!">Coming Soon</button>
               </div>
@@ -247,7 +253,7 @@
                   <h3 class="lp-card-title">autonomous-drone-programming</h3>
                 </div>
                 <div class="lp-card-meta">
-                  <span>8 Modules</span>
+                  <span>3 Modules</span>
                   <span>8 - 10 Weeks</span>
                 </div>
               </div>
@@ -258,9 +264,9 @@
               <div class="lp-card-actions">
                 <span class="lp-prereq">
                   <svg width="12" height="12" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
-                  Requires: ML & DL
+                  Requires: ML &amp; DL
                 </span>
-                <button class="btn btn-secondary btn-sm lp-coming-soon" title="Roadmap coming soon!">Coming Soon</button>
+                <span style="font-size:0.7rem; font-family:var(--font-mono); color:var(--text-tertiary);">Phase 4</span>
               </div>
             </div>
           </div>
@@ -270,16 +276,16 @@
         <div class="lp-connector">
           <svg width="2" height="40" viewBox="0 0 2 40"><line x1="1" y1="0" x2="1" y2="40" stroke="var(--accent-blue)" stroke-width="2"/></svg>
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--accent-blue)"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
-          <span class="lp-branch-label" style="color: var(--accent-blue);">Converge into supervised capstone</span>
+          <span class="lp-branch-label" style="color: var(--accent-blue);">Converge into supervised capstone ↓</span>
         </div>
 
-        <!-- Step 5 — Supervised Capstone -->
+        <!-- Capstone — You Are Here -->
         <div class="lp-step lp-capstone-step">
           <div class="lp-step-number capstone">CAP</div>
           <div class="lp-card lp-card-capstone">
             <div class="lp-card-header">
               <div>
-                <span class="lp-badge capstone-badge">Supervised Capstone</span>
+                <span class="lp-badge capstone-badge">You Are Here — Supervised Capstone</span>
                 <h3 class="lp-card-title" style="color: var(--accent-blue);">drone-development-engineer</h3>
               </div>
               <div class="lp-card-meta">
@@ -287,23 +293,16 @@
                 <span>6 - 9 Months</span>
               </div>
             </div>
-            <p class="lp-card-desc">The full-stack supervised capstone — multirotor aerodynamics, BLDC/ESC hardware assembly, PX4 firmware, cascaded PID control, EKF2 sensor fusion, ROS 2 autonomy, VIO/SLAM, AI computer vision, and FAA safety audits.</p>
+            <p class="lp-card-desc">The full-stack supervised capstone — aerodynamics, hardware assembly, PX4 firmware, PID control, EKF2 sensor fusion, ROS 2 autonomy, VIO/SLAM, AI computer vision, and FAA safety audits.</p>
             <div class="lp-card-tech">
               <span class="lang-dot lang-cpp"></span> C++ / Python / ROS 2 / Gazebo / PyTorch
             </div>
-            <div class="lp-card-prereq-list">
-              <span>Prerequisites:</span>
-              <span class="prereq-tag">Python Programming</span>
-              <span class="prereq-tag">Data Analysis</span>
-              <span class="prereq-tag">ML & DL</span>
-              <span class="prereq-tag">Autonomous Drone Programming</span>
-            </div>
-            <div class="lp-card-actions" style="margin-top: 1.25rem;">
+            <div class="lp-card-actions" style="margin-top: 0.5rem;">
               <span class="lp-status capstone-status">
                 <svg width="8" height="8" viewBox="0 0 8 8"><circle cx="4" cy="4" r="4" fill="currentColor"/></svg>
-                Interactive Roadmap Available
+                Interactive Roadmap — Phases 5 to 10 Below
               </span>
-              <a href="roadmaps/drone-development-engineer/" class="btn btn-primary">Explore Capstone Roadmap →</a>
+              <button class="btn btn-primary btn-sm" onclick="document.getElementById('roadmap-timeline').scrollIntoView({behavior:'smooth'})">Start Roadmap ↓</button>
             </div>
           </div>
         </div>
@@ -311,46 +310,55 @@
       </div>
     </section>
 
+    <div style="border-top: 1px solid var(--border-default); margin-bottom: 2.5rem; display:flex; align-items:center; gap:1rem; padding-top:1.5rem;">
+      <h2 style="font-size:1.1rem; margin:0;">Interactive Roadmap — Phases 5 to 10</h2>
+      <span style="font-family:var(--font-mono); font-size:0.68rem; color:var(--text-tertiary); background:var(--bg-tertiary); border:1px solid var(--border-muted); border-radius:999px; padding:2px 8px;">Click any module to open details</span>
+    </div>
+
+    <!-- Timeline Phases -->
+    <div id="roadmap-timeline" class="roadmap-container">
+      <!-- Injected by js/roadmap.js -->
+    </div>
+
   </main>
+
+  <!-- Slide-over Drawer Panel -->
+  <div class="drawer-backdrop" id="node-drawer">
+    <div class="drawer-panel">
+      <button class="drawer-close" id="drawer-close">✕</button>
+      <div id="drawer-body">
+        <!-- Dynamic drawer content -->
+      </div>
+    </div>
+  </div>
 
   <!-- Footer -->
   <footer class="footer">
     <div class="container footer-inner">
       <div>
-        <p><strong>OpenSemester</strong> — Open-source community engineering platform for undergraduate students.</p>
-        <p style="margin-top: 4px; color: var(--text-tertiary);">Hosted on GitHub Pages • MIT License • <a href="CONTRIBUTING.md" style="color: var(--text-tertiary);">Contributing Guide</a></p>
+        <p><strong>OpenSemester</strong> — Drone Development Engineer Roadmap Specification.</p>
+        <p style="margin-top: 4px; color: var(--text-tertiary);">Hosted on GitHub Pages • MIT License</p>
       </div>
       <ul class="footer-links">
         <li><a href="https://github.com/OpenSemester" target="_blank">GitHub Org</a></li>
-        <li><a href="roadmaps/drone-development-engineer/">Drone Roadmap</a></li>
-        <li><a href="CONTRIBUTING.md" target="_blank">Contribute</a></li>
+        <li><a href="../../index.html">Home</a></li>
+        <li><a href="../../index.html#learning-path">Learning Path</a></li>
       </ul>
     </div>
   </footer>
 
-  <script src="js/data.js"></script>
-  <script src="js/data-loader.js"></script>
-  <script src="js/app.js"></script>
+  <script src="../../js/data.js"></script>
+  <script src="../../js/roadmap.js"></script>
+  <script src="../../js/app.js"></script>
   <script>
-    // Coming Soon toast for unreleased roadmaps
     (function() {
       var toast = document.createElement('div');
-      toast.id = 'cs-toast';
-      toast.style.cssText = 'position:fixed;bottom:1.5rem;right:1.5rem;z-index:9999;background:var(--bg-secondary);border:1px solid var(--border-active);color:var(--text-primary);padding:10px 18px;border-radius:8px;font-size:13px;font-family:var(--font-mono);box-shadow:var(--shadow-elevated);display:none;align-items:center;gap:8px;transition:opacity 0.2s ease;';
+      toast.style.cssText = 'position:fixed;bottom:1.5rem;right:1.5rem;z-index:9999;background:var(--bg-secondary);border:1px solid var(--border-active);color:var(--text-primary);padding:10px 18px;border-radius:8px;font-size:13px;font-family:var(--font-mono);box-shadow:var(--shadow-elevated);display:none;align-items:center;gap:8px;';
       toast.innerHTML = '<svg width="14" height="14" fill="none" stroke="var(--accent-orange)" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg> This roadmap is coming soon!';
       document.body.appendChild(toast);
-
       document.addEventListener('click', function(e) {
-        if (e.target.classList.contains('lp-coming-soon') || e.target.closest('.lp-coming-soon')) {
-          e.preventDefault();
-          toast.style.display = 'flex';
-          toast.style.opacity = '1';
-          clearTimeout(window._csToastTimer);
-          window._csToastTimer = setTimeout(function() {
-            toast.style.opacity = '0';
-            setTimeout(function() { toast.style.display = 'none'; }, 200);
-          }, 2500);
-        }
+        var t = e.target.classList.contains('lp-coming-soon') ? e.target : (e.target.closest && e.target.closest('.lp-coming-soon'));
+        if (t) { e.preventDefault(); toast.style.display = 'flex'; clearTimeout(window._cst); window._cst = setTimeout(function() { toast.style.display = 'none'; }, 2500); }
       });
     })();
   </script>

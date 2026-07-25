@@ -299,3 +299,15 @@
   padding: 4px 12px;
   font-size: 0.75rem;
 }
+
+/* ── Coming Soon Module Button ── */
+.lp-coming-soon {
+  cursor: default;
+  opacity: 0.55;
+  pointer-events: auto;
+  font-family: var(--font-mono);
+}
+
+.lp-coming-soon:hover {
+  opacity: 0.65;
+}

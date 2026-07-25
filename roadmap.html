@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Roadmap — OpenSemester</title>
+  <meta name="description" content="Open-source engineering learning roadmap.">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/roadmap.css">
+  <link rel="stylesheet" href="css/learning-path.css">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="container nav-container">
+      <div class="brand-wrapper">
+        <a href="index.html" class="brand-logo">
+          <svg width="24" height="24" viewBox="0 0 24 24"><path fill="var(--accent-blue)" d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+          OpenSemester
+        </a>
+        <span class="repo-badge">Public</span>
+      </div>
+      <ul class="nav-menu">
+        <li class="nav-item"><a href="index.html">Home</a></li>
+        <li class="nav-item"><a href="index.html#learning-path">Learning Path</a></li>
+        <li class="nav-item"><a href="index.html#resources">Resources</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main class="container">
+    <div class="roadmap-header-card">
+      <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 1.5rem;">
+        <div>
+          <div class="breadcrumb-nav">
+            <a href="index.html">OpenSemester</a>
+            <span>/</span>
+            <span id="roadmap-breadcrumb" style="color: var(--text-primary);">loading...</span>
+          </div>
+          <h1 id="roadmap-title" style="font-size: 2.2rem; font-weight: 800; margin-bottom: 8px;">Loading...</h1>
+          <p id="roadmap-desc" style="color: var(--text-secondary); max-width: 720px; font-size: 1.05rem; line-height: 1.5;"></p>
+        </div>
+        <div class="dev-progress-card">
+          <div class="dev-progress-title">
+            <span>Milestones Completed</span>
+            <span id="progress-percent" style="color: var(--accent-green);">0%</span>
+          </div>
+          <div class="dev-progress-bar-bg">
+            <div class="dev-progress-bar-fill" id="progress-bar-fill"></div>
+          </div>
+          <div style="font-size: 11px; font-family: var(--font-mono); color: var(--text-tertiary); margin-top: 6px; text-align: right;">
+            <span id="completed-count">0</span> / <span id="total-count">0</span> Completed
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="roadmap-timeline" class="roadmap-container"></div>
+  </main>
+
+  <div class="drawer-backdrop" id="node-drawer">
+    <div class="drawer-panel">
+      <button class="drawer-close" id="drawer-close">✕</button>
+      <div id="drawer-body"></div>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div>
+        <p><strong>OpenSemester</strong> — Open-source engineering roadmap.</p>
+        <p style="margin-top: 4px; color: var(--text-tertiary);">Hosted on GitHub Pages • MIT License</p>
+      </div>
+      <ul class="footer-links">
+        <li><a href="https://github.com/OpenSemester" target="_blank">GitHub Org</a></li>
+        <li><a href="index.html">Home</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <script src="js/roadmap.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', async () => {
+      const params = new URLSearchParams(window.location.search);
+      const id = params.get('id');
+      if (!id) {
+        document.getElementById('roadmap-title').innerText = 'No roadmap specified';
+        return;
+      }
+
+      const data = await OpenSemesterData.loadRoadmapById(id);
+      if (!data) {
+        document.getElementById('roadmap-title').innerText = 'Roadmap not found';
+        document.getElementById('roadmap-desc').innerText = 'Could not load roadmap data.';
+        return;
+      }
+
+      document.getElementById('roadmap-title').innerText = data.title || data.displayTitle || id;
+      document.getElementById('roadmap-desc').innerText = data.description || data.subtitle || '';
+      document.getElementById('roadmap-breadcrumb').innerText = id;
+
+      const renderer = new RoadmapRenderer({
+        data: data,
+        containerId: 'roadmap-timeline',
+        drawerId: 'node-drawer',
+        drawerCloseId: 'drawer-close',
+        drawerBodyId: 'drawer-body',
+        progressBarFillId: 'progress-bar-fill',
+        progressPercentId: 'progress-percent',
+        completedCountId: 'completed-count',
+        totalCountId: 'total-count',
+        storageKey: 'opensemester_roadmap_' + id + '_v1'
+      });
+      renderer.init();
+    });
+  </script>
+</body>
+</html>

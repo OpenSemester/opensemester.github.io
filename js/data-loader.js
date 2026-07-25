@@ -23,7 +23,6 @@ const OpenSemesterData = {
 
       if (droneRoadmapRes.status === 'fulfilled') {
         this.activeRoadmap = droneRoadmapRes.value;
-        // Keep global window.DRONE_ROADMAP_DATA populated for backward compatibility
         window.DRONE_ROADMAP_DATA = droneRoadmapRes.value;
         if (resourcesRes.status === 'fulfilled') {
           window.DRONE_ROADMAP_DATA.resourcesCatalog = resourcesRes.value;
@@ -31,9 +30,29 @@ const OpenSemesterData = {
       }
     } catch (err) {
       console.warn('Data loader fallback active:', err);
+    } finally {
+      document.dispatchEvent(new CustomEvent('opensemester-data-ready', { detail: this }));
+    }
+  },
+
+  async loadRoadmapById(id, retries = 2) {
+    for (let attempt = 0; attempt <= retries; attempt++) {
+      try {
+        const res = await fetch(`data/roadmaps/${id}.json`);
+        if (!res.ok) throw new Error(`Failed to load roadmap: ${id}`);
+        const data = await res.json();
+        window.DRONE_ROADMAP_DATA = data;
+        return data;
+      } catch (err) {
+        if (attempt < retries) {
+          await new Promise(r => setTimeout(r, 1000 * (attempt + 1)));
+          continue;
+        }
+        console.error('Could not load roadmap:', err);
+        return null;
+      }
     }
   }
 };
 
-// Initialize immediately
 OpenSemesterData.init();

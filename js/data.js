@@ -5,13 +5,331 @@ const DRONE_ROADMAP_DATA = {
   subtitle: "Comprehensive open-source master path from flight physics, hardware assembly & firmware to ROS 2 autonomy, AI vision & SLAM.",
   repoUrl: "https://github.com/OpenSemester/opensemester.github.io",
   lastUpdated: "2026-07-25",
-  totalModules: 24,
   estimatedTime: "6 - 9 Months",
   
   phases: [
+
+    // ── PREREQUISITE PHASES (Learning Path) ──────────────────────────────────
+
+    {
+      id: "phase-pre-1",
+      number: 1,
+      title: "Python Programming",
+      description: "Core Python 3 foundation — syntax, OOP, file I/O, decorators, async programming, and FastAPI REST APIs. Required entry point for all modules.",
+      color: "#3fb950",
+      nodes: [
+        {
+          id: "pre1-node-1",
+          title: "Python 3 Core & OOP",
+          difficulty: "Required",
+          time: "2 Weeks",
+          description: "Variables, control flow, functions, list comprehensions, decorators, classes, inheritance, and dunder methods.",
+          topics: [
+            "Python 3 syntax: Variables, operators, string formatting (f-strings), type hints",
+            "Control flow: if/elif/else, for/while loops, break/continue/pass",
+            "Functions: *args/**kwargs, closures, decorators, lambda expressions",
+            "OOP: Classes, inheritance, polymorphism, dunder (__init__, __repr__, __str__)",
+            "Error handling: try/except/finally, custom exceptions"
+          ],
+          resources: [
+            { title: "Python Official Documentation", url: "https://docs.python.org/3/", type: "Docs" },
+            { title: "Real Python — OOP in Python", url: "https://realpython.com/python3-object-oriented-programming/", type: "Blog" }
+          ],
+          checklist: [
+            "Build a command-line task manager using classes and file I/O.",
+            "Implement a decorator that logs function execution time.",
+            "Write unit tests with pytest covering edge cases."
+          ]
+        },
+        {
+          id: "pre1-node-2",
+          title: "Async Python, File I/O & APIs",
+          difficulty: "Required",
+          time: "2 Weeks",
+          description: "asyncio coroutines, context managers, reading/writing files, CSV/JSON parsing, and building FastAPI REST endpoints.",
+          topics: [
+            "asyncio: async/await, event loops, Tasks, gather(), run()",
+            "Context managers: with statement, __enter__/__exit__, contextlib",
+            "File I/O: open(), pathlib, reading CSV/JSON with built-in and pandas",
+            "FastAPI: Routing, Pydantic models, request validation, Swagger UI",
+            "HTTP requests with httpx/aiohttp"
+          ],
+          resources: [
+            { title: "FastAPI Official Documentation", url: "https://fastapi.tiangolo.com/", type: "Docs" },
+            { title: "asyncio — Python Official Guide", url: "https://docs.python.org/3/library/asyncio.html", type: "Docs" }
+          ],
+          checklist: [
+            "Build a FastAPI REST API with at least 3 endpoints and Pydantic validation.",
+            "Write an async script that fetches data from 5 URLs concurrently.",
+            "Parse a CSV telemetry file and output statistics using only stdlib."
+          ]
+        },
+        {
+          id: "pre1-node-3",
+          title: "Python Tooling, Testing & Packaging",
+          difficulty: "Recommended",
+          time: "1 Week",
+          description: "Virtual environments, pip, pytest, black/ruff formatting, and packaging Python projects.",
+          topics: [
+            "Virtual environments: venv, pip install -r requirements.txt",
+            "Testing: pytest fixtures, parametrize, mocking with unittest.mock",
+            "Code quality: black, ruff, mypy type checking",
+            "Packaging: pyproject.toml, setuptools, building distributable wheels"
+          ],
+          resources: [
+            { title: "pytest Official Docs", url: "https://docs.pytest.org/", type: "Docs" },
+            { title: "Ruff — An Extremely Fast Python Linter", url: "https://github.com/astral-sh/ruff", type: "GitHub" }
+          ],
+          checklist: [
+            "Set up a Python project with venv, ruff, and pytest.",
+            "Achieve 90%+ test coverage on a data processing module.",
+            "Package and install your project locally with pip install -e ."
+          ]
+        }
+      ]
+    },
+
+    {
+      id: "phase-pre-2",
+      number: 2,
+      title: "Data Analysis Using Python",
+      description: "NumPy, Pandas, Matplotlib, Seaborn — data wrangling, EDA, hypothesis testing, and linear regression on real-world datasets.",
+      color: "#3fb950",
+      nodes: [
+        {
+          id: "pre2-node-1",
+          title: "NumPy & Pandas for Data Wrangling",
+          difficulty: "Required",
+          time: "2 Weeks",
+          description: "Array operations, broadcasting, DataFrame manipulation, merging, groupby, and handling missing data.",
+          topics: [
+            "NumPy: ndarray, broadcasting, vectorized math, linear algebra (np.linalg)",
+            "Pandas: Series, DataFrame, read_csv/read_json, indexing (loc/iloc)",
+            "Data cleaning: fillna, dropna, duplicates, dtype casting",
+            "GroupBy aggregations, pivot tables, merge/join operations",
+            "Time-series indexing with DatetimeIndex and resampling"
+          ],
+          resources: [
+            { title: "Pandas Documentation", url: "https://pandas.pydata.org/docs/", type: "Docs" },
+            { title: "NumPy User Guide", url: "https://numpy.org/doc/stable/user/", type: "Docs" }
+          ],
+          checklist: [
+            "Clean a real-world dataset: handle missing values and cast dtypes.",
+            "Compute grouped statistics on a flight telemetry log.",
+            "Vectorize a loop-based calculation using NumPy broadcasting."
+          ]
+        },
+        {
+          id: "pre2-node-2",
+          title: "EDA, Statistics & Visualization",
+          difficulty: "Required",
+          time: "2 Weeks",
+          description: "Exploratory data analysis, hypothesis testing, correlation, and publication-quality plots with Matplotlib and Seaborn.",
+          topics: [
+            "Descriptive statistics: mean, std, quartiles, skewness, kurtosis",
+            "Matplotlib: Line, scatter, bar, histogram, subplots, figure styling",
+            "Seaborn: heatmap, pairplot, violinplot, lmplot, FacetGrid",
+            "Hypothesis testing: t-test, chi-squared, Mann-Whitney U (scipy.stats)",
+            "Correlation matrices and feature relationship analysis"
+          ],
+          resources: [
+            { title: "Matplotlib Documentation", url: "https://matplotlib.org/stable/", type: "Docs" },
+            { title: "Seaborn Tutorial Gallery", url: "https://seaborn.pydata.org/tutorial.html", type: "Docs" }
+          ],
+          checklist: [
+            "Generate a full EDA report on a public dataset (Kaggle).",
+            "Produce a correlation heatmap and identify the top 3 correlated features.",
+            "Run a t-test comparing two experimental groups and report p-value."
+          ]
+        },
+        {
+          id: "pre2-node-3",
+          title: "Regression & Predictive Modeling",
+          difficulty: "Recommended",
+          time: "1 Week",
+          description: "Linear and polynomial regression, train/test splits, cross-validation, and Scikit-Learn pipelines.",
+          topics: [
+            "Linear regression: OLS, gradient descent, R², MSE, MAE",
+            "Polynomial features and regularization (Ridge, Lasso)",
+            "Scikit-Learn Pipeline: Imputer → Scaler → Estimator",
+            "Train/validation/test splits and k-fold cross-validation",
+            "Bias-variance tradeoff and model selection"
+          ],
+          resources: [
+            { title: "Scikit-Learn User Guide", url: "https://scikit-learn.org/stable/user_guide.html", type: "Docs" }
+          ],
+          checklist: [
+            "Build a linear regression model predicting battery discharge rate.",
+            "Use 5-fold cross-validation and report mean/std of R² score.",
+            "Compare Ridge vs Lasso on a multicollinear dataset."
+          ]
+        }
+      ]
+    },
+
+    {
+      id: "phase-pre-3",
+      number: 3,
+      title: "Machine Learning & Deep Learning",
+      description: "Supervised ML, XGBoost, CNNs, RNNs, Transformers, and production MLOps — from gradient descent to cloud model deployment.",
+      color: "#bc8cff",
+      nodes: [
+        {
+          id: "pre3-node-1",
+          title: "Classical ML — Supervised & Ensemble Methods",
+          difficulty: "Required",
+          time: "3 Weeks",
+          description: "Decision trees, random forests, gradient boosting, SVM, and feature engineering for tabular data.",
+          topics: [
+            "Decision Trees: Gini impurity, information gain, pruning",
+            "Ensemble methods: Bagging (RandomForest), Boosting (XGBoost, LightGBM)",
+            "Support Vector Machines: kernel trick, C/gamma hyperparameters",
+            "Feature engineering: One-hot encoding, target encoding, feature selection",
+            "Hyperparameter tuning: Grid search, Bayesian optimization (Optuna)"
+          ],
+          resources: [
+            { title: "XGBoost Documentation", url: "https://xgboost.readthedocs.io/", type: "Docs" },
+            { title: "Hands-On ML with Scikit-Learn & TensorFlow", url: "https://github.com/ageron/handson-ml3", type: "GitHub" }
+          ],
+          checklist: [
+            "Train an XGBoost classifier on a drone fault detection dataset.",
+            "Tune hyperparameters with Optuna and plot importance features.",
+            "Implement a complete MLflow experiment tracking pipeline."
+          ]
+        },
+        {
+          id: "pre3-node-2",
+          title: "Deep Learning — CNNs, RNNs & Transformers",
+          difficulty: "Required",
+          time: "4 Weeks",
+          description: "Building and training neural networks with PyTorch: convolutional, recurrent, and attention-based architectures.",
+          topics: [
+            "PyTorch tensors, autograd, nn.Module, DataLoader, training loops",
+            "CNNs: Conv2d, BatchNorm, MaxPool, ResNet skip connections",
+            "RNNs/LSTMs for time-series and sequential sensor data",
+            "Transformer architecture: Self-attention, positional encoding, ViT",
+            "Transfer learning: Fine-tuning ResNet, MobileNet, EfficientNet"
+          ],
+          resources: [
+            { title: "PyTorch Official Tutorials", url: "https://pytorch.org/tutorials/", type: "Docs" },
+            { title: "Andrej Karpathy — Neural Networks: Zero to Hero", url: "https://github.com/karpathy/nn-zero-to-hero", type: "GitHub" }
+          ],
+          checklist: [
+            "Train a CNN for aerial image classification in PyTorch from scratch.",
+            "Fine-tune a pre-trained ResNet model on a custom drone dataset.",
+            "Build an LSTM for predicting battery state-of-charge from telemetry."
+          ]
+        },
+        {
+          id: "pre3-node-3",
+          title: "MLOps — Production ML Deployment",
+          difficulty: "Recommended",
+          time: "3 Weeks",
+          description: "Model versioning with MLflow, export to ONNX/TensorRT, FastAPI inference endpoints, and CI/CD model pipelines.",
+          topics: [
+            "MLflow: Experiment tracking, model registry, artifact logging",
+            "Model export: PyTorch → ONNX → TensorRT for edge inference",
+            "FastAPI + Uvicorn inference server with async batch processing",
+            "Docker containerization of ML inference services",
+            "CI/CD pipelines for automated model retraining"
+          ],
+          resources: [
+            { title: "MLflow Documentation", url: "https://mlflow.org/docs/latest/", type: "Docs" },
+            { title: "ONNX Runtime Documentation", url: "https://onnxruntime.ai/docs/", type: "Docs" }
+          ],
+          checklist: [
+            "Export a PyTorch model to ONNX and verify output parity.",
+            "Deploy a real-time inference endpoint with FastAPI and Docker.",
+            "Set up MLflow tracking server with model registry and stage promotion."
+          ]
+        }
+      ]
+    },
+
+    {
+      id: "phase-pre-4",
+      number: 4,
+      title: "Autonomous Drone Programming",
+      description: "PX4 SITL, MAVLink scripting, Gazebo simulation, ROS 2 offboard control, YOLO vision integration, and Pixhawk hardware deployment.",
+      color: "#ff7b72",
+      nodes: [
+        {
+          id: "pre4-node-1",
+          title: "MAVLink Protocol & Python Mission Scripting",
+          difficulty: "Required",
+          time: "2 Weeks",
+          description: "Understanding MAVLink 2.0 message framing and writing autonomous mission scripts with pymavlink and MAVSDK.",
+          topics: [
+            "MAVLink 2.0 message structure, CRC-256, system/component IDs",
+            "Parsing HEARTBEAT, ATTITUDE, GLOBAL_POSITION_INT messages",
+            "pymavlink: Serial connection, parameter read/write, waypoint upload",
+            "MAVSDK-Python: Async takeoff, goto, land, mission scripting",
+            "Testing scripts against PX4 SITL before hardware deployment"
+          ],
+          resources: [
+            { title: "MAVLink Official Protocol Guide", url: "https://mavlink.io/en/", type: "Docs" },
+            { title: "MAVSDK-Python Examples", url: "https://github.com/mavlink/MAVSDK-Python", type: "GitHub" }
+          ],
+          checklist: [
+            "Parse live MAVLink telemetry and log GPS coordinates to CSV.",
+            "Upload and execute a 5-waypoint mission with pymavlink.",
+            "Implement a safety heartbeat monitor that triggers RTL on disconnect."
+          ]
+        },
+        {
+          id: "pre4-node-2",
+          title: "PX4 SITL & Gazebo Simulation",
+          difficulty: "Required",
+          time: "3 Weeks",
+          description: "Running PX4 SITL with Gazebo Harmonic, creating custom drone models, and testing flight scripts safely before field deployment.",
+          topics: [
+            "PX4 SITL setup on Ubuntu 22.04 with Gazebo Garden/Harmonic",
+            "URDF/SDF model creation: rotor dynamics, camera/LiDAR sensors",
+            "Simulating wind gusts, GPS spoofing, motor failures",
+            "Hardware-In-The-Loop (HITL) with real Pixhawk in simulation loop",
+            "Running automated test suites against SITL missions"
+          ],
+          resources: [
+            { title: "PX4 Gazebo Simulation Docs", url: "https://docs.px4.io/main/en/sim_gazebo_gz/", type: "Docs" },
+            { title: "gz-sim — Gazebo Physics Simulator", url: "https://github.com/gazebosim/gz-sim", type: "GitHub" }
+          ],
+          checklist: [
+            "Launch PX4 SITL + Gazebo and fly a takeoff/hover/land script.",
+            "Build a custom SDF drone model with a downward-facing camera.",
+            "Simulate GPS loss and verify HOLD mode failsafe activates."
+          ]
+        },
+        {
+          id: "pre4-node-3",
+          title: "ROS 2 Offboard Control & YOLO Vision",
+          difficulty: "Required",
+          time: "3 Weeks",
+          description: "Publishing position setpoints via ROS 2 + Micro XRCE-DDS, and integrating YOLO object detection for vision-guided flight.",
+          topics: [
+            "ROS 2 Humble: Nodes, topics, services, QoS, colcon build",
+            "PX4 ↔ ROS 2 bridge via Micro XRCE-DDS agent",
+            "Publishing OffboardControlMode & TrajectorySetpoint messages",
+            "YOLOv8 integration on companion SBC for real-time detection",
+            "Vision-based target tracking with proportional control"
+          ],
+          resources: [
+            { title: "ARK Electronics ROS 2 PX4 Tutorial (YouTube)", url: "https://www.youtube.com/watch?v=k44O-1_oM7Q", type: "YouTube" },
+            { title: "ARK-Electronics ROS2 PX4 Offboard Example", url: "https://github.com/ARK-Electronics/ROS2_PX4_Offboard_Example", type: "GitHub" }
+          ],
+          checklist: [
+            "Run Micro XRCE-DDS agent and verify PX4 topic bridge.",
+            "Write a ROS 2 C++ node executing a square flight path in offboard mode.",
+            "Integrate YOLO detection and send centering velocity commands to PX4."
+          ]
+        }
+      ]
+    },
+
+    // ── CAPSTONE PHASES (Drone Engineering) ───────────────────────────────────
+
     {
       id: "phase-1",
-      number: 1,
+      number: 5,
       title: "Drone Fundamentals, Aerodynamics & Power Systems",
       description: "Multirotor & VTOL physics, structural frame design, BLDC motors, ESC protocols, and high-current electrical safety.",
       color: "#58a6ff",
@@ -87,7 +405,7 @@ const DRONE_ROADMAP_DATA = {
 
     {
       id: "phase-2",
-      number: 2,
+      number: 6,
       title: "Flight Controllers, Sensors & Firmware Setup",
       description: "STM32 microcontrollers, IMU/GNSS sensor physics, ArduPilot & PX4 firmware flashing, and Mission Planner configuration.",
       color: "#58a6ff",
@@ -163,7 +481,7 @@ const DRONE_ROADMAP_DATA = {
 
     {
       id: "phase-3",
-      number: 3,
+      number: 7,
       title: "Autonomous Drone Programming & MAVLink",
       description: "MAVLink 2.0 serial protocol, Python scripting with pymavlink & MAVSDK, Offboard mode, and Gazebo SITL simulation.",
       color: "#bc8cff",
@@ -239,7 +557,7 @@ const DRONE_ROADMAP_DATA = {
 
     {
       id: "phase-4",
-      number: 4,
+      number: 8,
       title: "ROS 2 & Microcontroller Integration",
       description: "Linux companion computers (NVIDIA Jetson / RPi 5), ROS 2 Humble/Jazzy, micro-ROS, and XRCE-DDS bridge.",
       color: "#3fb950",
@@ -315,7 +633,7 @@ const DRONE_ROADMAP_DATA = {
 
     {
       id: "phase-5",
-      number: 5,
+      number: 9,
       title: "Perception, Computer Vision & SLAM",
       description: "Stereo depth cameras, OpenCV target tracking, YOLO object detection, Visual-Inertial Odometry (VIO), and 3D SLAM.",
       color: "#d29922",
@@ -391,7 +709,7 @@ const DRONE_ROADMAP_DATA = {
 
     {
       id: "phase-6",
-      number: 6,
+      number: 10,
       title: "Python Data Analysis, ML & Production MLOps",
       description: "Python telemetry wrangling (NumPy/Pandas), log visualization, ML/DL vision models, and FAA Part 107 safety audits.",
       color: "#58a6ff",

@@ -1,8 +1,6 @@
 // OpenSemester - App Global Controller with Real Live GitHub Stars Fetcher
 
-document.addEventListener('DOMContentLoaded', () => {
-  if (typeof DRONE_ROADMAP_DATA === 'undefined') return;
-
+function initApp() {
   const resourcesGrid = document.getElementById('resources-grid');
   const categoryTabs = document.getElementById('category-tabs');
   const searchInput = document.getElementById('search-input');
@@ -11,9 +9,22 @@ document.addEventListener('DOMContentLoaded', () => {
   let activeCategory = 'All';
   let searchQuery = '';
 
-  // GitHub API Star Cache in SessionStorage
-  const CACHE_KEY = 'opensemester_gh_stars_cache_v1';
-  let starCache = JSON.parse(sessionStorage.getItem(CACHE_KEY) || '{}');
+  // GitHub API Star Cache in localStorage with 1-hour expiry
+  const CACHE_KEY = 'opensemester_gh_stars_cache_v2';
+  let starCache = (() => {
+    const raw = localStorage.getItem(CACHE_KEY);
+    if (!raw) return {};
+    try {
+      const parsed = JSON.parse(raw);
+      if (parsed._expiry && Date.now() > parsed._expiry) {
+        localStorage.removeItem(CACHE_KEY);
+        return {};
+      }
+      return parsed;
+    } catch {
+      return {};
+    }
+  })();
 
   // Helper to extract repo path from GitHub URL
   function getRepoPathFromUrl(url) {
@@ -51,7 +62,8 @@ document.addEventListener('DOMContentLoaded', () => {
         const data = await response.json();
         const stars = data.stargazers_count;
         starCache[repoPath] = stars;
-        sessionStorage.setItem(CACHE_KEY, JSON.stringify(starCache));
+        starCache._expiry = Date.now() + 3600000;
+        localStorage.setItem(CACHE_KEY, JSON.stringify(starCache));
         return stars;
       }
     } catch (err) {
@@ -138,6 +150,14 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  // Keyboard shortcut: '/' to focus search
+  document.addEventListener('keydown', (e) => {
+    if (e.key === '/' && !['INPUT', 'TEXTAREA'].includes(e.target.tagName)) {
+      e.preventDefault();
+      searchInput?.focus();
+    }
+  });
+
   // Setup Event Listeners
   if (categoryTabs) {
     categoryTabs.addEventListener('click', (e) => {
@@ -160,4 +180,14 @@ document.addEventListener('DOMContentLoaded', () => {
   // Initial Execution
   updateNavbarOrgStars();
   renderResources();
-});
+}
+
+function startApp() {
+  if (typeof DRONE_ROADMAP_DATA !== 'undefined') {
+    initApp();
+  } else {
+    document.addEventListener('opensemester-data-ready', initApp, { once: true });
+  }
+}
+
+document.addEventListener('DOMContentLoaded', startApp);

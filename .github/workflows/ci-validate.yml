@@ -21,13 +21,14 @@ jobs:
 
       - name: Validate JSON Files Syntax
         run: |
-          python -m json.tool data/resources.json > /dev/null
-          python -m json.tool data/roadmaps/index.json > /dev/null
-          python -m json.tool data/roadmaps/drone-development-engineer.json > /dev/null
+          for f in data/resources.json data/roadmaps/index.json data/roadmaps/*.json; do
+            python -m json.tool "$f" > /dev/null || { echo "Invalid JSON: $f"; exit 1; }
+          done
           echo "All JSON datasets are valid syntax."
 
       - name: Verify HTML Files Exist
         run: |
-          test -f index.html || exit 1
-          test -f drone-engineer.html || exit 1
+          for f in index.html drone-engineer.html roadmap.html roadmaps/drone-development-engineer/index.html; do
+            test -f "$f" || { echo "Missing HTML: $f"; exit 1; }
+          done
           echo "All HTML files present."

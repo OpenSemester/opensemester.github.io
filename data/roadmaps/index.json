@@ -14,7 +14,7 @@
     "duration": "4 - 6 Weeks",
     "url": "roadmap.html?id=python-programming",
     "jsonPath": "data/roadmaps/python-programming.json",
-    "prerequisite": null,
+    "prerequisites": [],
     "isCapstone": false,
     "isFeatured": false
   },
@@ -33,7 +33,7 @@
     "duration": "5 - 7 Weeks",
     "url": "roadmap.html?id=data-analysis-python",
     "jsonPath": "data/roadmaps/data-analysis-python.json",
-    "prerequisite": "python-programming",
+    "prerequisites": ["python-programming"],
     "isCapstone": false,
     "isFeatured": false
   },
@@ -52,7 +52,7 @@
     "duration": "8 - 12 Weeks",
     "url": "roadmap.html?id=machine-learning-deep-learning",
     "jsonPath": "data/roadmaps/machine-learning-deep-learning.json",
-    "prerequisite": "data-analysis-python",
+    "prerequisites": ["data-analysis-python"],
     "isCapstone": false,
     "isFeatured": false
   },
@@ -71,7 +71,7 @@
     "duration": "8 - 10 Weeks",
     "url": "roadmap.html?id=generative-ai-engineer",
     "jsonPath": "data/roadmaps/generative-ai-engineer.json",
-    "prerequisite": "machine-learning-deep-learning",
+    "prerequisites": ["machine-learning-deep-learning"],
     "isCapstone": false,
     "isFeatured": false
   },
@@ -90,7 +90,7 @@
     "duration": "8 - 10 Weeks",
     "url": "roadmap.html?id=autonomous-drone-programming",
     "jsonPath": "data/roadmaps/autonomous-drone-programming.json",
-    "prerequisite": "machine-learning-deep-learning",
+    "prerequisites": ["machine-learning-deep-learning"],
     "isCapstone": false,
     "isFeatured": false
   },
@@ -104,12 +104,11 @@
     "description": "The full-stack supervised capstone — multirotor aerodynamics, BLDC/ESC hardware assembly, PX4 firmware, EKF2 sensor fusion, ROS 2 autonomy, VIO/SLAM, and FAA safety audits.",
     "tech": "C++ / Python / ROS 2",
     "langDot": "lang-cpp",
-    "modules": 24,
+    "modules": 18,
     "phases": 6,
     "duration": "6 - 9 Months",
-    "url": "drone-engineer.html",
+    "url": "roadmaps/drone-development-engineer/",
     "jsonPath": "data/roadmaps/drone-development-engineer.json",
-    "prerequisite": "autonomous-drone-programming",
     "prerequisites": ["python-programming", "data-analysis-python", "machine-learning-deep-learning", "autonomous-drone-programming"],
     "isCapstone": true,
     "isFeatured": true
