@@ -1,0 +1,231 @@
+{
+  "title": "Machine Learning & Deep Learning",
+  "subtitle": "From supervised learning fundamentals to CNNs, RNNs, Transformers, and production MLOps deployment pipelines.",
+  "id": "machine-learning-deep-learning",
+  "order": 3,
+  "prerequisite": "data-analysis-python",
+  "estimatedTime": "8 - 12 Weeks",
+  "totalModules": 10,
+  "phases": [
+    {
+      "id": "ml-phase-1",
+      "number": 1,
+      "title": "Classical ML Algorithms & Model Evaluation",
+      "description": "Linear models, tree-based ensembles, unsupervised clustering, and rigorous model evaluation frameworks.",
+      "color": "#58a6ff",
+      "nodes": [
+        {
+          "id": "ml-p1-n1",
+          "title": "Linear Models, Regression & Classification",
+          "difficulty": "Required",
+          "time": "1.5 Weeks",
+          "description": "Linear regression, logistic regression, gradient descent, cost functions, and evaluation metrics.",
+          "topics": [
+            "ML pipeline: problem definition, feature engineering, model training, evaluation",
+            "Linear Regression: cost function (MSE) and gradient descent optimization",
+            "Logistic Regression: sigmoid function, log-loss, and decision boundary",
+            "Model evaluation: Accuracy, Precision, Recall, F1, ROC-AUC curves",
+            "Overfitting vs underfitting: bias-variance tradeoff",
+            "Cross-validation: k-fold and stratified k-fold"
+          ],
+          "resources": [
+            { "title": "Andrew Ng — Machine Learning Specialization (Coursera)", "url": "https://www.coursera.org/specializations/machine-learning-introduction", "type": "Course" },
+            { "title": "Scikit-Learn Official Documentation", "url": "https://scikit-learn.org/stable/", "type": "Docs" },
+            { "title": "StatQuest ML Playlist (YouTube)", "url": "https://www.youtube.com/@statquest", "type": "YouTube" }
+          ],
+          "checklist": [
+            "Build and train a logistic regression classifier on a binary dataset.",
+            "Plot ROC-AUC curve and interpret the area under the curve.",
+            "Run 5-fold cross-validation and report mean ± std accuracy."
+          ]
+        },
+        {
+          "id": "ml-p1-n2",
+          "title": "Tree-Based Algorithms & Ensemble Methods",
+          "difficulty": "Required",
+          "time": "1.5 Weeks",
+          "description": "Decision trees, Random Forest bagging, Gradient Boosting, XGBoost, and LightGBM ensembles.",
+          "topics": [
+            "Decision Trees: entropy, information gain, Gini impurity, pruning",
+            "Random Forest: bagging, feature subspace sampling, OOB error",
+            "Gradient Boosting Machines (GBM): boosting principle, residual learning",
+            "XGBoost and LightGBM: regularization, learning rate, max depth",
+            "Hyperparameter tuning: GridSearchCV and RandomizedSearchCV",
+            "Feature importance and SHAP value interpretation"
+          ],
+          "resources": [
+            { "title": "XGBoost Official Documentation", "url": "https://xgboost.readthedocs.io/", "type": "Docs" },
+            { "title": "Kaggle — Intermediate Machine Learning Course", "url": "https://www.kaggle.com/learn/intermediate-machine-learning", "type": "Course" }
+          ],
+          "checklist": [
+            "Train a Random Forest classifier and visualize feature importances.",
+            "Run XGBoost with early stopping on a Kaggle competition dataset.",
+            "Use GridSearchCV to optimize max_depth and n_estimators."
+          ]
+        },
+        {
+          "id": "ml-p1-n3",
+          "title": "Unsupervised Learning, Clustering & Dimensionality Reduction",
+          "difficulty": "Required",
+          "time": "1 Week",
+          "description": "K-Means, hierarchical clustering, PCA, t-SNE, and UMAP for high-dimensional data exploration.",
+          "topics": [
+            "K-Means clustering: centroid initialization, elbow method",
+            "Hierarchical clustering: dendrograms and linkage criteria",
+            "DBSCAN density-based clustering for non-spherical clusters",
+            "Principal Component Analysis (PCA): variance explained, scree plot",
+            "t-SNE and UMAP for high-dimensional visualization",
+            "Customer segmentation case study"
+          ],
+          "resources": [
+            { "title": "Scikit-Learn Clustering User Guide", "url": "https://scikit-learn.org/stable/modules/clustering.html", "type": "Docs" },
+            { "title": "StatQuest PCA Explained (YouTube)", "url": "https://www.youtube.com/watch?v=FgakZw6K1QQ", "type": "YouTube" }
+          ],
+          "checklist": [
+            "Apply K-Means to a customer dataset and determine optimal k with elbow method.",
+            "Visualize high-dimensional embeddings using t-SNE.",
+            "Reduce a dataset from 50 to 5 dimensions using PCA."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ml-phase-2",
+      "number": 2,
+      "title": "Deep Learning Foundations",
+      "description": "Neural network architecture, backpropagation, activation functions, and TensorFlow/Keras framework.",
+      "color": "#bc8cff",
+      "nodes": [
+        {
+          "id": "ml-p2-n1",
+          "title": "Neural Networks & Backpropagation",
+          "difficulty": "Required",
+          "time": "1.5 Weeks",
+          "description": "Perceptrons, multi-layer networks, activation functions, loss functions, and the backpropagation algorithm.",
+          "topics": [
+            "Biological vs artificial neurons: perceptron model",
+            "Multi-layer Perceptrons (MLPs) and feedforward architecture",
+            "Activation functions: Sigmoid, Tanh, ReLU, Leaky ReLU, Softmax",
+            "Loss functions: Binary Cross-Entropy, Categorical Cross-Entropy, MSE",
+            "Backpropagation: chain rule and weight update mechanics",
+            "Build neural network from scratch in pure NumPy"
+          ],
+          "resources": [
+            { "title": "3Blue1Brown — Neural Networks Series (YouTube)", "url": "https://www.youtube.com/playlist?list=PLZHQObOWTQDNU6R1_67000Dx_ZCJB-3pi", "type": "YouTube" },
+            { "title": "Deep Learning Specialization — Andrew Ng (Coursera)", "url": "https://www.coursera.org/specializations/deep-learning", "type": "Course" }
+          ],
+          "checklist": [
+            "Implement a 2-layer neural network from scratch in NumPy.",
+            "Verify gradients using numerical gradient checking.",
+            "Train the network on XOR problem and visualize decision boundary."
+          ]
+        },
+        {
+          "id": "ml-p2-n2",
+          "title": "TensorFlow/Keras & CNNs for Computer Vision",
+          "difficulty": "Required",
+          "time": "2 Weeks",
+          "description": "Keras Sequential and Functional API, regularization, CNNs, pooling layers, and transfer learning with ResNet.",
+          "topics": [
+            "TensorFlow 2 / Keras Sequential and Functional API",
+            "Optimizers: SGD, RMSprop, Adam; learning rate scheduling",
+            "Regularization: Dropout, L1/L2 weight decay, batch normalization",
+            "CNN architecture: Conv2D, MaxPool, GlobalAveragePooling",
+            "Popular CNN architectures: VGG, ResNet, MobileNet",
+            "Transfer learning: fine-tuning pre-trained ImageNet models"
+          ],
+          "resources": [
+            { "title": "TensorFlow Official Tutorials", "url": "https://www.tensorflow.org/tutorials", "type": "Docs" },
+            { "title": "Fast.ai Practical Deep Learning for Coders", "url": "https://course.fast.ai/", "type": "Course" }
+          ],
+          "checklist": [
+            "Build a CNN image classifier on CIFAR-10 using Keras.",
+            "Apply transfer learning with ResNet50 on a custom 5-class dataset.",
+            "Use data augmentation to improve validation accuracy by 10%+."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ml-phase-3",
+      "number": 3,
+      "title": "Sequence Models, Transformers & MLOps",
+      "description": "RNNs, LSTMs, attention mechanisms, Transformer architecture, model interpretability, and production deployment.",
+      "color": "#3fb950",
+      "nodes": [
+        {
+          "id": "ml-p3-n1",
+          "title": "RNNs, LSTMs & Time Series Forecasting",
+          "difficulty": "Required",
+          "time": "1.5 Weeks",
+          "description": "Recurrent neural networks, LSTM/GRU gating mechanisms, and multi-step time series prediction.",
+          "topics": [
+            "Recurrent Neural Network (RNN) architecture for sequential data",
+            "Vanishing gradient problem in RNNs",
+            "LSTM gate mechanism: Forget, Input, Output gates",
+            "GRU architecture vs LSTM trade-offs",
+            "Time series forecasting: windowing, multi-step prediction",
+            "Sentiment analysis with LSTM on text sequences"
+          ],
+          "resources": [
+            { "title": "Sequence Models — Andrew Ng (Coursera)", "url": "https://www.coursera.org/learn/nlp-sequence-models", "type": "Course" },
+            { "title": "Colah's Blog — Understanding LSTMs", "url": "https://colah.github.io/posts/2015-08-Understanding-LSTMs/", "type": "Blog" }
+          ],
+          "checklist": [
+            "Train an LSTM on a stock price dataset for 5-day ahead forecasting.",
+            "Compare LSTM vs GRU performance on a text classification task.",
+            "Visualize LSTM hidden state activations."
+          ]
+        },
+        {
+          "id": "ml-p3-n2",
+          "title": "Attention Mechanisms & Transformer Architecture",
+          "difficulty": "Advanced",
+          "time": "1.5 Weeks",
+          "description": "Self-attention, multi-head attention, Transformer encoder-decoder, and modern BERT/GPT architecture overview.",
+          "topics": [
+            "Attention mechanism: Query, Key, Value and scaled dot-product",
+            "Self-attention and multi-head parallel attention",
+            "Transformer architecture: encoder stack, positional encoding",
+            "BERT (bidirectional encoder) and GPT (causal decoder) overview",
+            "Vision Transformer (ViT) for image classification",
+            "Text classification with Hugging Face Transformers"
+          ],
+          "resources": [
+            { "title": "Illustrated Transformer — Jay Alammar's Blog", "url": "https://jalammar.github.io/illustrated-transformer/", "type": "Blog" },
+            { "title": "Hugging Face NLP Course (Free)", "url": "https://huggingface.co/learn/nlp-course/", "type": "Course" }
+          ],
+          "checklist": [
+            "Implement scaled dot-product attention in NumPy/PyTorch.",
+            "Fine-tune a BERT model on a binary classification task.",
+            "Deploy a text classification API using Hugging Face + FastAPI."
+          ]
+        },
+        {
+          "id": "ml-p3-n3",
+          "title": "MLOps, Model Interpretability & Production Deployment",
+          "difficulty": "Required",
+          "time": "1 Week",
+          "description": "Experiment tracking with MLflow, Docker containerization, cloud deployment, model drift detection, and SHAP explainability.",
+          "topics": [
+            "Advanced cross-validation: stratified K-Fold, time-series CV",
+            "Hyperparameter tuning: Bayesian optimization with Optuna",
+            "Model interpretability: Feature importance, SHAP values, LIME",
+            "MLflow: experiment tracking, model versioning, and registry",
+            "Docker containerization of ML inference APIs",
+            "Cloud deployment: AWS SageMaker / Azure ML endpoints"
+          ],
+          "resources": [
+            { "title": "MLflow Official Documentation", "url": "https://mlflow.org/docs/latest/", "type": "Docs" },
+            { "title": "Made With ML — MLOps Course (Free)", "url": "https://madewithml.com/", "type": "Course" }
+          ],
+          "checklist": [
+            "Track 10+ experiments with MLflow and compare metrics dashboard.",
+            "Containerize a scikit-learn model API with Docker.",
+            "Generate SHAP summary plots explaining model predictions."
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,204 @@
+{
+  "title": "Python Programming",
+  "subtitle": "Core Python 3 programming language foundations — syntax, OOP, file I/O, packaging, async programming, and FastAPI production APIs.",
+  "id": "python-programming",
+  "order": 1,
+  "prerequisite": null,
+  "estimatedTime": "4 - 6 Weeks",
+  "totalModules": 8,
+  "phases": [
+    {
+      "id": "pp-phase-1",
+      "number": 1,
+      "title": "Python Basics & Environment Setup",
+      "description": "Core Python syntax, data types, variables, I/O, and PEP 8 formatting best practices.",
+      "color": "#58a6ff",
+      "nodes": [
+        {
+          "id": "pp-p1-n1",
+          "title": "Python Syntax, Data Types & Environment",
+          "difficulty": "Required",
+          "time": "1 Week",
+          "description": "Setting up Python 3 environment, core syntax, primitive types, and writing your first program.",
+          "topics": [
+            "Setting up Python 3 and choosing an IDE (VS Code, PyCharm)",
+            "Basic syntax: variables, expressions, and statements",
+            "Data types: int, float, str, bool, NoneType",
+            "Input/output operations and type casting",
+            "String formatting: f-strings, .format(), and slicing",
+            "PEP 8 code style formatting best practices"
+          ],
+          "resources": [
+            { "title": "Python 3 Official Documentation", "url": "https://docs.python.org/3/", "type": "Docs" },
+            { "title": "freeCodeCamp Python Full Course (YouTube)", "url": "https://www.youtube.com/watch?v=rfscVS0vtbw", "type": "YouTube" }
+          ],
+          "checklist": [
+            "Install Python 3.12+ and configure VS Code with Python extension.",
+            "Write a calculator CLI program using basic arithmetic.",
+            "Format output using f-strings and string methods."
+          ]
+        },
+        {
+          "id": "pp-p1-n2",
+          "title": "Control Flow, Loops & Functions",
+          "difficulty": "Required",
+          "time": "1 Week",
+          "description": "Conditional branching, loops, function definitions, scope, lambda expressions, and namespaces.",
+          "topics": [
+            "Conditional statements: if, elif, else chains",
+            "Loops: for, while, break, continue, and else clauses",
+            "Function definition, parameters, default args, and *args/**kwargs",
+            "Return values and multiple returns",
+            "Lambda anonymous functions and closures",
+            "Scope and namespaces (LEGB rule)"
+          ],
+          "resources": [
+            { "title": "Real Python - Python Functions Guide", "url": "https://realpython.com/defining-your-own-python-function/", "type": "Blog" },
+            { "title": "Corey Schafer Python Tutorial Series (YouTube)", "url": "https://www.youtube.com/playlist?list=PL-osiE80TeTt2d9bfVyTiXJA-UTHn6WwU", "type": "YouTube" }
+          ],
+          "checklist": [
+            "Write a function with default parameters and *args.",
+            "Implement FizzBuzz using loops and conditionals.",
+            "Create a lambda-based map/filter pipeline."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "pp-phase-2",
+      "number": 2,
+      "title": "Data Structures & OOP",
+      "description": "Python built-in data structures, comprehensions, and object-oriented programming patterns.",
+      "color": "#3fb950",
+      "nodes": [
+        {
+          "id": "pp-p2-n1",
+          "title": "Lists, Tuples, Dicts, Sets & Comprehensions",
+          "difficulty": "Required",
+          "time": "1 Week",
+          "description": "Python's built-in collection types, slicing, nested structures, and list/dict/set comprehensions.",
+          "topics": [
+            "Lists: indexing, slicing, mutability, and common methods",
+            "Tuples: immutability and named tuples",
+            "Dictionaries: keys, values, items, defaultdict",
+            "Sets: union, intersection, difference operations",
+            "List comprehensions, dict comprehensions, generator expressions",
+            "Nested data structures (JSON-like objects)"
+          ],
+          "resources": [
+            { "title": "Python Data Structures Official Docs", "url": "https://docs.python.org/3/tutorial/datastructures.html", "type": "Docs" },
+            { "title": "Real Python — List Comprehension Tutorial", "url": "https://realpython.com/list-comprehension-python/", "type": "Blog" }
+          ],
+          "checklist": [
+            "Build a word frequency counter using a dictionary.",
+            "Use list comprehensions to filter and transform data.",
+            "Flatten a nested list using a generator expression."
+          ]
+        },
+        {
+          "id": "pp-p2-n2",
+          "title": "Object-Oriented Programming (OOP)",
+          "difficulty": "Required",
+          "time": "1 Week",
+          "description": "Classes, objects, inheritance, polymorphism, encapsulation, magic methods, and abstract classes.",
+          "topics": [
+            "Classes and objects: __init__, instance vs class attributes",
+            "Inheritance and method overriding",
+            "Polymorphism and duck typing",
+            "Encapsulation: private/protected attributes",
+            "Magic methods: __str__, __repr__, __len__, __eq__",
+            "Abstract base classes (ABCs) and interfaces"
+          ],
+          "resources": [
+            { "title": "Corey Schafer OOP in Python (YouTube)", "url": "https://www.youtube.com/watch?v=ZDa-Z5JzLYM", "type": "YouTube" },
+            { "title": "Real Python — OOP in Python 3", "url": "https://realpython.com/python3-object-oriented-programming/", "type": "Blog" }
+          ],
+          "checklist": [
+            "Build a Student class hierarchy with inheritance.",
+            "Implement magic methods for a custom Vector class.",
+            "Create an abstract Shape class with concrete subclasses."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "pp-phase-3",
+      "number": 3,
+      "title": "Advanced Python & Production APIs",
+      "description": "File I/O, error handling, decorators, async programming, packaging, and FastAPI REST APIs.",
+      "color": "#bc8cff",
+      "nodes": [
+        {
+          "id": "pp-p3-n1",
+          "title": "File I/O, Error Handling & Logging",
+          "difficulty": "Required",
+          "time": "0.5 Weeks",
+          "description": "Reading and writing files, CSV/JSON/XML handling, exception types, and production logging patterns.",
+          "topics": [
+            "File reading and writing (text mode and binary mode)",
+            "Working with CSV, JSON, and XML file formats",
+            "Exception handling: try/except/finally/else",
+            "Custom exception classes",
+            "Context managers (with statement)",
+            "Python logging module patterns"
+          ],
+          "resources": [
+            { "title": "Python Exception Handling — Real Python", "url": "https://realpython.com/python-exceptions/", "type": "Blog" }
+          ],
+          "checklist": [
+            "Write a CSV parser that handles malformed rows gracefully.",
+            "Implement a custom FileNotFoundError exception subclass.",
+            "Set up a rotating file logger for a CLI application."
+          ]
+        },
+        {
+          "id": "pp-p3-n2",
+          "title": "Decorators, Generators & Async Programming",
+          "difficulty": "Recommended",
+          "time": "0.5 Weeks",
+          "description": "Advanced Python patterns: decorators, context managers, generators/iterators, and asyncio concurrent programming.",
+          "topics": [
+            "Decorators: function wrappers and @property",
+            "Generators and iterators with yield",
+            "Context managers with __enter__/__exit__",
+            "Multithreading with threading module",
+            "Async programming with asyncio, await, and event loops",
+            "Regular expressions with re module"
+          ],
+          "resources": [
+            { "title": "Real Python — Python Async IO in Practice", "url": "https://realpython.com/async-io-python/", "type": "Blog" }
+          ],
+          "checklist": [
+            "Write a timing decorator using functools.wraps.",
+            "Build an async HTTP client using asyncio and aiohttp.",
+            "Create a custom generator for infinite Fibonacci sequence."
+          ]
+        },
+        {
+          "id": "pp-p3-n3",
+          "title": "FastAPI, Testing & Production Project Structure",
+          "difficulty": "Required",
+          "time": "1 Week",
+          "description": "Building REST APIs with FastAPI, connecting databases, writing pytest unit tests, and structuring production Python projects.",
+          "topics": [
+            "REST API fundamentals and HTTP methods",
+            "FastAPI: route handlers, Pydantic schemas, dependency injection",
+            "Connecting FastAPI to SQLite/PostgreSQL with SQLAlchemy",
+            "Unit testing with unittest and pytest",
+            "Virtual environments and pip package management",
+            "Project structure, docstrings, and README documentation"
+          ],
+          "resources": [
+            { "title": "FastAPI Official Documentation", "url": "https://fastapi.tiangolo.com/", "type": "Docs" },
+            { "title": "TestDriven.io FastAPI Tutorial", "url": "https://testdriven.io/blog/fastapi-crud/", "type": "Blog" }
+          ],
+          "checklist": [
+            "Build a CRUD REST API with FastAPI and SQLite.",
+            "Write pytest unit tests achieving 80%+ code coverage.",
+            "Package and publish a Python utility module to PyPI."
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,216 @@
+{
+  "title": "Autonomous Drone Programming Engineer",
+  "subtitle": "PX4 development environment, MAVLink protocol, Gazebo SITL simulation, ROS 2 offboard control, and AI computer vision integration.",
+  "id": "autonomous-drone-programming",
+  "order": 5,
+  "prerequisite": "machine-learning-deep-learning",
+  "estimatedTime": "8 - 10 Weeks",
+  "totalModules": 8,
+  "phases": [
+    {
+      "id": "adp-phase-1",
+      "number": 1,
+      "title": "PX4 Environment & MAVLink Communication",
+      "description": "Setting up PX4 development environment, SITL simulation, and MAVLink protocol scripting with Python.",
+      "color": "#58a6ff",
+      "nodes": [
+        {
+          "id": "adp-p1-n1",
+          "title": "PX4 Development Environment & SITL",
+          "difficulty": "Required",
+          "time": "1.5 Weeks",
+          "description": "PX4 vs ArduPilot vs ROS stack comparison, Ubuntu PX4 dev setup, and first SITL Software-In-The-Loop simulation.",
+          "topics": [
+            "PX4 vs ArduPilot vs ROS — choosing the right stack for your project",
+            "Setting up PX4 development environment on Ubuntu 22.04",
+            "Exploring PX4-Autopilot repository architecture and module structure",
+            "Building PX4 firmware with CMake and Ninja toolchain",
+            "Running PX4 Software-In-The-Loop (SITL) simulation",
+            "QGroundControl: connecting, monitoring, and manual mission upload"
+          ],
+          "resources": [
+            { "title": "PX4 Autopilot Developer Documentation", "url": "https://docs.px4.io/main/en/", "type": "Docs" },
+            { "title": "PX4/PX4-Autopilot GitHub Repository", "url": "https://github.com/PX4/PX4-Autopilot", "type": "GitHub" }
+          ],
+          "checklist": [
+            "Successfully build PX4 firmware for px4_sitl_default target.",
+            "Launch PX4 SITL and connect QGroundControl.",
+            "Fly a manual takeoff and land mission in SITL."
+          ]
+        },
+        {
+          "id": "adp-p1-n2",
+          "title": "MAVLink 2.0 Protocol & Python Scripting",
+          "difficulty": "Required",
+          "time": "1.5 Weeks",
+          "description": "MAVLink message structure, pymavlink telemetry parsing, QGroundControl monitoring, and debugging MAVLink streams.",
+          "topics": [
+            "MAVLink 2.0: message framing, system/component IDs, CRC-256",
+            "Key telemetry messages: ATTITUDE, GLOBAL_POSITION_INT, HEARTBEAT",
+            "Installing and using pymavlink for Python MAVLink scripting",
+            "Writing a Python script to arm, takeoff, and land via MAVLink",
+            "MAVLink parameter protocol: reading and writing flight parameters",
+            "Debugging MAVLink communication with Wireshark and QGC inspector"
+          ],
+          "resources": [
+            { "title": "MAVLink Developer Guide & Message Definitions", "url": "https://mavlink.io/en/", "type": "Docs" },
+            { "title": "MAVSDK Python Repository & Examples", "url": "https://github.com/mavlink/MAVSDK-Python", "type": "GitHub" }
+          ],
+          "checklist": [
+            "Write a Python MAVLink script that reads real-time GPS telemetry.",
+            "Send ARM and takeoff commands via pymavlink to SITL.",
+            "Read and modify a PID parameter value remotely over MAVLink."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "adp-phase-2",
+      "number": 2,
+      "title": "Gazebo Simulation & Offboard Control",
+      "description": "Launching Gazebo PX4 SITL drone models, autonomous scripted offboard missions, and obstacle avoidance simulations.",
+      "color": "#3fb950",
+      "nodes": [
+        {
+          "id": "adp-p2-n1",
+          "title": "Gazebo SITL Simulation & Drone Models",
+          "difficulty": "Required",
+          "time": "1.5 Weeks",
+          "description": "Installing Gazebo with PX4, launching quadrotor/VTOL/fixed-wing models, and simulating sensor noise and failure scenarios.",
+          "topics": [
+            "Installing and configuring Gazebo Garden/Harmonic with PX4",
+            "Launching different drone models: quadrotor, VTOL, and fixed-wing",
+            "Controlling drones in simulation via Python MAVSDK scripts",
+            "Running autonomous flight missions inside Gazebo",
+            "Simulating GPS loss, wind gusts, and motor failure scenarios",
+            "HITL (Hardware-In-The-Loop) setup with physical Pixhawk"
+          ],
+          "resources": [
+            { "title": "PX4 Gazebo Simulation Integration Manual", "url": "https://docs.px4.io/main/en/simulation/gazebo.html", "type": "Docs" },
+            { "title": "gazebosim/gz-sim Physics Simulator Repository", "url": "https://github.com/gazebosim/gz-sim", "type": "GitHub" }
+          ],
+          "checklist": [
+            "Launch iris quadrotor SITL in Gazebo from the PX4 source tree.",
+            "Run a 6-waypoint autonomous mission from a Python script.",
+            "Simulate GPS denial and verify RTL failsafe activation."
+          ]
+        },
+        {
+          "id": "adp-p2-n2",
+          "title": "Offboard Control & Waypoint Navigation",
+          "difficulty": "Required",
+          "time": "1.5 Weeks",
+          "description": "PX4 Offboard flight mode: sending position, velocity, and attitude setpoints from Python scripts.",
+          "topics": [
+            "Offboard mode: what it is and when to use it",
+            "Sending position, velocity, and attitude setpoints from Python",
+            "Implementing autonomous takeoff, hover, and precision landing",
+            "Building waypoint navigation with GPS coordinates",
+            "Offboard heartbeat keepalive and emergency fallback handling",
+            "Common Offboard errors and troubleshooting techniques"
+          ],
+          "resources": [
+            { "title": "Jaeyoung Lim PX4-Offboard Reference Implementation", "url": "https://github.com/Jaeyoung-Lim/px4-offboard", "type": "GitHub" },
+            { "title": "PX4 Offboard Control Mode Documentation", "url": "https://docs.px4.io/main/en/flight_modes/offboard.html", "type": "Docs" }
+          ],
+          "checklist": [
+            "Write a Python script executing takeoff → 5m hover → 10m circle → landing.",
+            "Implement a heartbeat thread maintaining Offboard mode.",
+            "Build GPS-coordinate waypoint navigation with cross-track error check."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "adp-phase-3",
+      "number": 3,
+      "title": "PX4 + ROS 2 Integration & AI Vision",
+      "description": "PX4-ROS 2 bridge with Micro XRCE-DDS, integrating sensors, path planning algorithms, and AI computer vision control loops.",
+      "color": "#bc8cff",
+      "nodes": [
+        {
+          "id": "adp-p3-n1",
+          "title": "PX4 + ROS 2 Bridge (Micro XRCE-DDS)",
+          "difficulty": "Required",
+          "time": "2 Weeks",
+          "description": "Installing ROS 2 Humble, Micro XRCE-DDS bridge, writing ROS 2 nodes for PX4 topic subscription and command publication.",
+          "topics": [
+            "Installing ROS 2 Humble and PX4-ROS2 bridge (Micro XRCE-DDS)",
+            "Understanding PX4 uORB topics exposed via DDS",
+            "Writing ROS 2 C++ nodes subscribing to vehicle odometry and status",
+            "Publishing OffboardControlMode and TrajectorySetpoint messages",
+            "Integrating external sensors (LiDAR, camera) via ROS 2 topics",
+            "Visualizing drone state in rviz2 and transforming tf2 frames"
+          ],
+          "resources": [
+            { "title": "ARK Electronics ROS 2 + PX4 Video Tutorial (YouTube)", "url": "https://www.youtube.com/watch?v=k44O-1_oM7Q", "type": "YouTube" },
+            { "title": "ARK-Electronics ROS2 PX4 Offboard Example Repo", "url": "https://github.com/ARK-Electronics/ROS2_PX4_Offboard_Example", "type": "GitHub" },
+            { "title": "PX4 ROS 2 Communication Architecture Docs", "url": "https://docs.px4.io/main/en/ros/ros2_comm.html", "type": "Docs" }
+          ],
+          "checklist": [
+            "Launch Micro XRCE-DDS Agent and verify PX4 topics in ROS 2.",
+            "Write a ROS 2 C++ node executing an automated offboard flight pattern.",
+            "Visualize drone pose from /fmu/out/vehicle_odometry in rviz2."
+          ]
+        },
+        {
+          "id": "adp-p3-n2",
+          "title": "AI Computer Vision & Path Planning for Drones",
+          "difficulty": "Advanced",
+          "time": "2 Weeks",
+          "description": "Streaming drone camera feeds to companion computer, OpenCV/YOLO processing, A*/RRT path planning, and vision-based Follow-Me.",
+          "topics": [
+            "Streaming live drone camera feed to companion computer via ROS 2",
+            "Processing images with OpenCV for object detection and tracking",
+            "Integrating YOLOv8 for real-time target recognition in flight",
+            "Building a vision-based Follow-Me autonomous mode",
+            "Path planning algorithms: A* and RRT* in 2D occupancy grids",
+            "Sending AI-driven navigation commands back to PX4 via ROS 2"
+          ],
+          "resources": [
+            { "title": "Ultralytics YOLO Real-Time Detection Repository", "url": "https://github.com/ultralytics/ultralytics", "type": "GitHub" },
+            { "title": "PythonRobotics Path Planning Algorithms Repository", "url": "https://github.com/AtsushiSakai/PythonRobotics", "type": "GitHub" }
+          ],
+          "checklist": [
+            "Stream and display a ROS 2 camera topic from Gazebo simulated camera.",
+            "Run YOLOv8 on the camera stream and publish detection bounding boxes.",
+            "Implement a simple A* path planner on a 2D occupancy grid."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "adp-phase-4",
+      "number": 4,
+      "title": "Real Hardware Deployment & Safety",
+      "description": "Flashing Pixhawk hardware, deploying Python/ROS 2 scripts on companion SBC, real flight testing, and safety audits.",
+      "color": "#d29922",
+      "nodes": [
+        {
+          "id": "adp-p4-n1",
+          "title": "Pixhawk Hardware Deployment & Companion Computer Setup",
+          "difficulty": "Required",
+          "time": "1.5 Weeks",
+          "description": "Flashing PX4 to physical Pixhawk, setting up Raspberry Pi / Jetson companion, and deploying Python/ROS 2 autonomy scripts.",
+          "topics": [
+            "Uploading PX4 firmware to Pixhawk using QGroundControl bootloader",
+            "Setting up Raspberry Pi 5 or NVIDIA Jetson as companion computer",
+            "Establishing UART/Ethernet serial link at 921600 baud",
+            "Deploying Python and ROS 2 autonomy scripts on companion SBC",
+            "systemd service auto-launch of autonomy nodes on boot",
+            "Safety checks: pre-flight checklist, arm inhibit conditions, geofence"
+          ],
+          "resources": [
+            { "title": "PX4 Companion Computer Integration Guide", "url": "https://docs.px4.io/main/en/companion_computer/", "type": "Docs" },
+            { "title": "Drone Dojo Real Hardware Deployment Tutorials (YouTube)", "url": "https://www.youtube.com/@thedronedojo", "type": "YouTube" }
+          ],
+          "checklist": [
+            "Flash PX4 firmware via QGroundControl to a physical Pixhawk.",
+            "Establish stable UART link between Pixhawk and Raspberry Pi.",
+            "Deploy and auto-start a ROS 2 autonomy node via systemd on boot."
+          ]
+        }
+      ]
+    }
+  ]
+}

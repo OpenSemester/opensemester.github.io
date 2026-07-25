@@ -7,13 +7,14 @@
   <meta name="description" content="Open-source community platform for undergraduate engineering students. Structured roadmaps, academic specs, and curated learning resources across CS, EEE, Robotics, and Embedded Systems.">
   <link rel="stylesheet" href="css/main.css">
   <link rel="stylesheet" href="css/resources.css">
+  <link rel="stylesheet" href="css/learning-path.css">
 </head>
 <body>
 
   <!-- Announcement Bar -->
   <div class="announcement-bar">
-    <span>OpenSemester v1.0 • Featured Resource: </span>
-    <a href="drone-engineer.html">Drone Development Engineer Roadmap →</a>
+    <span>OpenSemester v1.0 • 6 Modules, 1 Supervised Capstone: </span>
+    <a href="drone-engineer.html">Drone Development Engineer →</a>
   </div>
 
   <!-- Navbar -->
@@ -29,9 +30,10 @@
 
       <ul class="nav-menu">
         <li class="nav-item"><a href="index.html" class="active">Home</a></li>
-        <li class="nav-item"><a href="#roadmaps">Roadmaps</a></li>
+        <li class="nav-item"><a href="#learning-path">Learning Path</a></li>
         <li class="nav-item"><a href="drone-engineer.html">Drone Engineer</a></li>
-        <li class="nav-item"><a href="#resources">Resource Catalog</a></li>
+        <li class="nav-item"><a href="#resources">Resources</a></li>
+        <li class="nav-item"><a href="CONTRIBUTING.md" target="_blank">Contribute</a></li>
       </ul>
 
       <div class="nav-actions">
@@ -42,13 +44,13 @@
         </div>
         <a href="https://github.com/OpenSemester/opensemester.github.io" target="_blank" rel="noopener" class="btn-github-star" id="nav-github-star">
           <svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
-          <span id="github-star-count">★ Star</span>
+          <span id="github-star-count">Star</span>
         </a>
       </div>
     </div>
   </nav>
 
-  <!-- Undergraduate Hero Header -->
+  <!-- Hero -->
   <header class="dev-hero">
     <div class="container">
       <div class="hero-repo-header">
@@ -61,14 +63,13 @@
         for Undergraduate Engineering Students.
       </h1>
       <p class="dev-hero-desc">
-        Community-curated career paths, subject roadmaps, project specifications, and academic learning resources — built to empower undergraduate engineering & computer science students worldwide.
+        Community-curated structured roadmaps, open-source project specifications, and academic learning resources — built to empower undergraduate engineering &amp; computer science students worldwide. All roadmaps lead to a supervised capstone.
       </p>
 
-      <!-- Terminal / CLI Preview Widget -->
       <div class="cli-widget">
         <div class="cli-header">
           <span>bash — git clone</span>
-          <span>open-source</span>
+          <span>open-source • MIT License</span>
         </div>
         <div class="cli-body">
           <code>$ gh repo clone OpenSemester/opensemester.github.io</code>
@@ -78,16 +79,15 @@
         </div>
       </div>
 
-      <!-- Stats Strip -->
       <div class="stats-strip">
         <div class="stat-item">
-          <strong>Undergrad</strong> CS / EEE / Robotics / Mech
+          <strong>6</strong> Learning Modules
         </div>
         <div class="stat-item">
-          <strong>24</strong> Mastery Modules
+          <strong>1</strong> Supervised Capstone
         </div>
         <div class="stat-item">
-          <strong>6</strong> Core Phases
+          <strong>60+</strong> Curated Resources
         </div>
         <div class="stat-item">
           <strong>MIT</strong> Free & Open Source
@@ -96,107 +96,220 @@
     </div>
   </header>
 
-  <!-- Roadmaps Section -->
   <main class="container">
-    <section id="roadmaps">
+
+    <!-- Supervised Learning Path -->
+    <section id="learning-path">
       <div class="section-heading">
         <div>
-          <h2>Undergraduate Specialization Roadmaps</h2>
-          <p>Structured master learning paths with milestone checklists, books, and code repositories.</p>
+          <h2>Supervised Drone Engineering Learning Path</h2>
+          <p>A structured sequence of 6 modules leading to the <strong>Drone Development Engineer</strong> supervised capstone. Complete modules in order to build foundational skills.</p>
         </div>
+        <a href="drone-engineer.html" class="btn btn-primary">View Capstone Roadmap</a>
       </div>
 
-      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 1rem;">
-        
-        <!-- Featured Resource: Drone Development Engineer -->
-        <div class="repo-card" style="grid-column: 1 / -1; border-color: var(--accent-blue);">
-          <div>
-            <div class="repo-card-top">
-              <h3 class="repo-card-title">
-                <a href="drone-engineer.html">drone-development-engineer</a>
-              </h3>
-              <span class="repo-badge-pill featured">Featured Resource</span>
+      <!-- Path Flow -->
+      <div class="lp-flow">
+
+        <!-- Step 1 -->
+        <div class="lp-step">
+          <div class="lp-step-number">01</div>
+          <div class="lp-card">
+            <div class="lp-card-header">
+              <div>
+                <span class="lp-badge foundation">Foundation</span>
+                <h3 class="lp-card-title">python-programming</h3>
+              </div>
+              <div class="lp-card-meta">
+                <span>8 Modules</span>
+                <span>4 - 6 Weeks</span>
+              </div>
             </div>
-            <p class="repo-card-desc">
-              Complete multi-disciplinary engineering path for undergraduate students spanning multirotor aerodynamics, STM32 C++ firmware, cascaded PID control loops, 24-state EKF2 sensor fusion, ROS 2 companion autonomy, and 3D SLAM visual navigation.
-            </p>
-            <div class="repo-card-meta">
-              <span><span class="lang-dot lang-cpp"></span>C++ / Python / ROS 2</span>
-              <span>24 Modules</span>
-              <span>6 Phases</span>
-              <span>Est. 6-9 Months</span>
+            <p class="lp-card-desc">Core Python 3 — syntax, OOP, file I/O, decorators, async programming, and FastAPI REST APIs. Required foundation for all modules.</p>
+            <div class="lp-card-tech">
+              <span class="lang-dot lang-python"></span> Python 3 / FastAPI / pytest
             </div>
-          </div>
-          <div style="margin-top: 1.5rem;">
-            <a href="drone-engineer.html" class="btn btn-primary">
-              Explore Drone Engineering Roadmap →
-            </a>
+            <div class="lp-card-actions">
+              <span class="lp-status active">
+                <svg width="8" height="8" viewBox="0 0 8 8"><circle cx="4" cy="4" r="4" fill="currentColor"/></svg>
+                Active
+              </span>
+              <a href="#" class="btn btn-secondary btn-sm">View Roadmap</a>
+            </div>
           </div>
         </div>
 
-        <!-- Robotics & Mechatronics Engineer -->
-        <div class="repo-card">
-          <div>
-            <div class="repo-card-top">
-              <h3 class="repo-card-title">
-                <a href="#">robotics-systems-engineer</a>
-              </h3>
-              <span class="repo-badge-pill dev">Under Review</span>
+        <div class="lp-connector">
+          <svg width="2" height="40" viewBox="0 0 2 40"><line x1="1" y1="0" x2="1" y2="40" stroke="var(--border-default)" stroke-width="2" stroke-dasharray="4 4"/></svg>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--text-tertiary)"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="lp-step">
+          <div class="lp-step-number">02</div>
+          <div class="lp-card">
+            <div class="lp-card-header">
+              <div>
+                <span class="lp-badge analysis">Data Analysis</span>
+                <h3 class="lp-card-title">data-analysis-using-python</h3>
+              </div>
+              <div class="lp-card-meta">
+                <span>10 Modules</span>
+                <span>5 - 7 Weeks</span>
+              </div>
             </div>
-            <p class="repo-card-desc">
-              Forward/inverse kinematics, MoveIt 2 manipulation, URDF robot modeling, Gazebo physics simulation, and ROS 2 hardware control interfaces.
-            </p>
-            <div class="repo-card-meta">
-              <span><span class="lang-dot lang-ros"></span>C++ / ROS 2</span>
-              <span>20 Modules</span>
+            <p class="lp-card-desc">NumPy, Pandas, Matplotlib, Seaborn — data wrangling, EDA, hypothesis testing, and linear regression on real-world datasets.</p>
+            <div class="lp-card-tech">
+              <span class="lang-dot lang-python"></span> Python / Pandas / NumPy / Seaborn
             </div>
-          </div>
-          <div style="margin-top: 1.25rem;">
-            <span class="btn btn-secondary" style="opacity: 0.65; cursor: not-allowed;">In Development</span>
+            <div class="lp-card-actions">
+              <span class="lp-prereq">
+                <svg width="12" height="12" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                Requires: Python Programming
+              </span>
+              <a href="#" class="btn btn-secondary btn-sm">View Roadmap</a>
+            </div>
           </div>
         </div>
 
-        <!-- Embedded Systems & IoT Engineer -->
-        <div class="repo-card">
-          <div>
-            <div class="repo-card-top">
-              <h3 class="repo-card-title">
-                <a href="#">embedded-systems-engineer</a>
-              </h3>
-              <span class="repo-badge-pill dev">Under Review</span>
+        <div class="lp-connector">
+          <svg width="2" height="40" viewBox="0 0 2 40"><line x1="1" y1="0" x2="1" y2="40" stroke="var(--border-default)" stroke-width="2" stroke-dasharray="4 4"/></svg>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--text-tertiary)"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="lp-step">
+          <div class="lp-step-number">03</div>
+          <div class="lp-card">
+            <div class="lp-card-header">
+              <div>
+                <span class="lp-badge ml">Machine Learning</span>
+                <h3 class="lp-card-title">machine-learning-deep-learning</h3>
+              </div>
+              <div class="lp-card-meta">
+                <span>10 Modules</span>
+                <span>8 - 12 Weeks</span>
+              </div>
             </div>
-            <p class="repo-card-desc">
-              Bare-metal C/C++, ARM Cortex-M microcontrollers, FreeRTOS task scheduling, DMA peripherals, and hardware logic analyzer debugging.
-            </p>
-            <div class="repo-card-meta">
-              <span><span class="lang-dot lang-cpp"></span>C / Assembly</span>
-              <span>22 Modules</span>
+            <p class="lp-card-desc">Supervised ML, XGBoost, CNNs, RNNs, Transformers, and production MLOps — from gradient descent to cloud model deployment.</p>
+            <div class="lp-card-tech">
+              <span class="lang-dot lang-python"></span> Python / PyTorch / Scikit-Learn / MLflow
             </div>
-          </div>
-          <div style="margin-top: 1.25rem;">
-            <span class="btn btn-secondary" style="opacity: 0.65; cursor: not-allowed;">In Development</span>
+            <div class="lp-card-actions">
+              <span class="lp-prereq">
+                <svg width="12" height="12" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                Requires: Data Analysis
+              </span>
+              <a href="#" class="btn btn-secondary btn-sm">View Roadmap</a>
+            </div>
           </div>
         </div>
 
-        <!-- AI & Autonomous Systems -->
-        <div class="repo-card">
-          <div>
-            <div class="repo-card-top">
-              <h3 class="repo-card-title">
-                <a href="#">ai-autonomous-systems</a>
-              </h3>
-              <span class="repo-badge-pill dev">Under Review</span>
-            </div>
-            <p class="repo-card-desc">
-              Computer vision, PyTorch deep learning, CUDA GPU acceleration, point cloud processing, and reinforcement learning for robotics.
-            </p>
-            <div class="repo-card-meta">
-              <span><span class="lang-dot lang-python"></span>Python / PyTorch</span>
-              <span>18 Modules</span>
+        <!-- Branch: Parallel Paths (GenAI + Autonomous Drone) -->
+        <div class="lp-connector">
+          <svg width="2" height="40" viewBox="0 0 2 40"><line x1="1" y1="0" x2="1" y2="40" stroke="var(--border-default)" stroke-width="2" stroke-dasharray="4 4"/></svg>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--text-tertiary)"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+          <span class="lp-branch-label">Choose one or both parallel specializations</span>
+        </div>
+
+        <div class="lp-parallel-grid">
+
+          <!-- Step 4A — GenAI -->
+          <div class="lp-step">
+            <div class="lp-step-number">04A</div>
+            <div class="lp-card lp-card-parallel">
+              <div class="lp-card-header">
+                <div>
+                  <span class="lp-badge genai">GenAI Specialist</span>
+                  <h3 class="lp-card-title">generative-ai-engineer</h3>
+                </div>
+                <div class="lp-card-meta">
+                  <span>10 Modules</span>
+                  <span>8 - 10 Weeks</span>
+                </div>
+              </div>
+              <p class="lp-card-desc">LLM internals, PEFT/LoRA fine-tuning, RAG pipelines, LangChain agents, Stable Diffusion, and production GenAI deployment.</p>
+              <div class="lp-card-tech">
+                <span class="lang-dot lang-python"></span> HuggingFace / LangChain / Diffusers
+              </div>
+              <div class="lp-card-actions">
+                <span class="lp-prereq">
+                  <svg width="12" height="12" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                  Requires: ML & DL
+                </span>
+                <a href="#" class="btn btn-secondary btn-sm">View Roadmap</a>
+              </div>
             </div>
           </div>
-          <div style="margin-top: 1.25rem;">
-            <span class="btn btn-secondary" style="opacity: 0.65; cursor: not-allowed;">In Development</span>
+
+          <!-- Step 4B — Autonomous Drone -->
+          <div class="lp-step">
+            <div class="lp-step-number">04B</div>
+            <div class="lp-card lp-card-parallel">
+              <div class="lp-card-header">
+                <div>
+                  <span class="lp-badge drone-prog">Drone Programming</span>
+                  <h3 class="lp-card-title">autonomous-drone-programming</h3>
+                </div>
+                <div class="lp-card-meta">
+                  <span>8 Modules</span>
+                  <span>8 - 10 Weeks</span>
+                </div>
+              </div>
+              <p class="lp-card-desc">PX4 SITL, MAVLink scripting, Gazebo simulation, ROS 2 offboard control, YOLO vision integration, and Pixhawk hardware deployment.</p>
+              <div class="lp-card-tech">
+                <span class="lang-dot lang-cpp"></span> Python / ROS 2 / C++ / Gazebo
+              </div>
+              <div class="lp-card-actions">
+                <span class="lp-prereq">
+                  <svg width="12" height="12" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                  Requires: ML & DL
+                </span>
+                <a href="#" class="btn btn-secondary btn-sm">View Roadmap</a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="lp-connector">
+          <svg width="2" height="40" viewBox="0 0 2 40"><line x1="1" y1="0" x2="1" y2="40" stroke="var(--accent-blue)" stroke-width="2"/></svg>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--accent-blue)"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+          <span class="lp-branch-label" style="color: var(--accent-blue);">Converge into supervised capstone</span>
+        </div>
+
+        <!-- Step 5 — Supervised Capstone -->
+        <div class="lp-step lp-capstone-step">
+          <div class="lp-step-number capstone">CAP</div>
+          <div class="lp-card lp-card-capstone">
+            <div class="lp-card-header">
+              <div>
+                <span class="lp-badge capstone-badge">Supervised Capstone</span>
+                <h3 class="lp-card-title" style="color: var(--accent-blue);">drone-development-engineer</h3>
+              </div>
+              <div class="lp-card-meta">
+                <span>24 Modules</span>
+                <span>6 - 9 Months</span>
+              </div>
+            </div>
+            <p class="lp-card-desc">The full-stack supervised capstone — multirotor aerodynamics, BLDC/ESC hardware assembly, PX4 firmware, cascaded PID control, EKF2 sensor fusion, ROS 2 autonomy, VIO/SLAM, AI computer vision, and FAA safety audits.</p>
+            <div class="lp-card-tech">
+              <span class="lang-dot lang-cpp"></span> C++ / Python / ROS 2 / Gazebo / PyTorch
+            </div>
+            <div class="lp-card-prereq-list">
+              <span>Prerequisites:</span>
+              <span class="prereq-tag">Python Programming</span>
+              <span class="prereq-tag">Data Analysis</span>
+              <span class="prereq-tag">ML & DL</span>
+              <span class="prereq-tag">Autonomous Drone Programming</span>
+            </div>
+            <div class="lp-card-actions" style="margin-top: 1.25rem;">
+              <span class="lp-status capstone-status">
+                <svg width="8" height="8" viewBox="0 0 8 8"><circle cx="4" cy="4" r="4" fill="currentColor"/></svg>
+                Interactive Roadmap Available
+              </span>
+              <a href="drone-engineer.html" class="btn btn-primary">Explore Capstone Roadmap →</a>
+            </div>
           </div>
         </div>
 
@@ -204,11 +317,11 @@
     </section>
 
     <!-- Resources Section -->
-    <section id="resources" style="margin-top: 3.5rem;">
+    <section id="resources" style="margin-top: 4rem;">
       <div class="section-heading">
         <div>
-          <h2>Undergraduate Academic Resource Catalog</h2>
-          <p>Handpicked open-source repositories, developer documentation, and simulators.</p>
+          <h2>Open-Source Resource Catalog</h2>
+          <p>Handpicked GitHub repositories, YouTube video series, Coursera courses, blogs, and simulators.</p>
         </div>
       </div>
 
@@ -219,6 +332,7 @@
           <li><button class="filter-btn" data-category="Autonomy & AI">Autonomy & AI</button></li>
           <li><button class="filter-btn" data-category="Tools & Software">Tools & Software</button></li>
           <li><button class="filter-btn" data-category="Protocols & Hardware">Protocols & Hardware</button></li>
+          <li><button class="filter-btn" data-category="Theory & Papers">Theory & Papers</button></li>
         </ul>
       </div>
 
@@ -233,12 +347,12 @@
     <div class="container footer-inner">
       <div>
         <p><strong>OpenSemester</strong> — Open-source community engineering platform for undergraduate students.</p>
-        <p style="margin-top: 4px; color: var(--text-tertiary);">Hosted on GitHub Pages • MIT License</p>
+        <p style="margin-top: 4px; color: var(--text-tertiary);">Hosted on GitHub Pages • MIT License • <a href="CONTRIBUTING.md" style="color: var(--text-tertiary);">Contributing Guide</a></p>
       </div>
       <ul class="footer-links">
         <li><a href="https://github.com/OpenSemester" target="_blank">GitHub Org</a></li>
         <li><a href="drone-engineer.html">Drone Roadmap</a></li>
-        <li><a href="https://github.com/OpenSemester" target="_blank">Contribute</a></li>
+        <li><a href="CONTRIBUTING.md" target="_blank">Contribute</a></li>
       </ul>
     </div>
   </footer>

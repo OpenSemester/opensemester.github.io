@@ -1,0 +1,183 @@
+{
+  "title": "Generative AI Engineer - Specialist",
+  "subtitle": "LLM fundamentals, RAG pipelines, fine-tuning with PEFT/LoRA, multimodal generation, and production GenAI application development.",
+  "id": "generative-ai-engineer",
+  "order": 4,
+  "prerequisite": "machine-learning-deep-learning",
+  "estimatedTime": "8 - 10 Weeks",
+  "totalModules": 10,
+  "phases": [
+    {
+      "id": "gen-phase-1",
+      "number": 1,
+      "title": "LLM Foundations & Prompt Engineering",
+      "description": "Transformer model internals, tokenization, embeddings, LLM architecture overview, and prompt engineering techniques.",
+      "color": "#bc8cff",
+      "nodes": [
+        {
+          "id": "gen-p1-n1",
+          "title": "LLM Architecture, Tokenization & Embeddings",
+          "difficulty": "Required",
+          "time": "1.5 Weeks",
+          "description": "Transformer architecture for generative models, BPE tokenization, semantic embedding spaces, and LLM inference.",
+          "topics": [
+            "Transformer architecture for generative models (decoder-only)",
+            "Byte-Pair Encoding (BPE) and SentencePiece tokenization",
+            "Token embeddings and positional encoding",
+            "Key-Value caching for efficient autoregressive generation",
+            "LLM inference: temperature, top-k, top-p (nucleus) sampling",
+            "Prompt engineering: zero-shot, few-shot, chain-of-thought prompting"
+          ],
+          "resources": [
+            { "title": "Andrej Karpathy — Build GPT from Scratch (YouTube)", "url": "https://www.youtube.com/watch?v=kCc8FmEb1nY", "type": "YouTube" },
+            { "title": "Hugging Face LLM Course (Free)", "url": "https://huggingface.co/learn/llm-course/", "type": "Course" },
+            { "title": "Illustrated GPT-2 — Jay Alammar's Blog", "url": "https://jalammar.github.io/illustrated-gpt2/", "type": "Blog" }
+          ],
+          "checklist": [
+            "Tokenize a text corpus with Hugging Face tokenizers and analyze vocab statistics.",
+            "Generate text using GPT-2 with custom temperature and top-p sampling.",
+            "Implement chain-of-thought prompting on a math reasoning task."
+          ]
+        },
+        {
+          "id": "gen-p1-n2",
+          "title": "LLM Fine-Tuning with PEFT & LoRA Adapters",
+          "difficulty": "Advanced",
+          "time": "2 Weeks",
+          "description": "Supervised fine-tuning (SFT), PEFT adapter techniques, LoRA low-rank decomposition, and quantization for edge deployment.",
+          "topics": [
+            "Supervised Fine-Tuning (SFT) on domain-specific instruction datasets",
+            "Parameter-Efficient Fine-Tuning (PEFT): adapters vs full fine-tuning",
+            "LoRA (Low-Rank Adaptation): rank decomposition and alpha scaling",
+            "QLoRA: 4-bit quantized LoRA for GPU-limited training",
+            "Quantization methods: GPTQ, AWQ, and bitsandbytes NF4",
+            "Model evaluation metrics: ROUGE, BLEU, perplexity"
+          ],
+          "resources": [
+            { "title": "Hugging Face PEFT Library Documentation", "url": "https://huggingface.co/docs/peft", "type": "Docs" },
+            { "title": "QLoRA Paper (Dettmers et al. 2023)", "url": "https://arxiv.org/abs/2305.14314", "type": "Paper" }
+          ],
+          "checklist": [
+            "Fine-tune a 7B LLM on a custom Q&A dataset using LoRA.",
+            "Apply 4-bit QLoRA training within 16GB GPU memory budget.",
+            "Evaluate fine-tuned model with ROUGE score vs base model."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "gen-phase-2",
+      "number": 2,
+      "title": "RAG Pipelines & LLM Application Development",
+      "description": "Vector databases, document chunking, RAG retrieval pipelines, LangChain agents, and LlamaIndex knowledge bases.",
+      "color": "#58a6ff",
+      "nodes": [
+        {
+          "id": "gen-p2-n1",
+          "title": "RAG: Vector Databases & Retrieval Pipelines",
+          "difficulty": "Required",
+          "time": "2 Weeks",
+          "description": "Building Retrieval-Augmented Generation (RAG) systems with vector embeddings, semantic search, and knowledge bases.",
+          "topics": [
+            "Vector databases: Pinecone, Chroma, Weaviate, FAISS",
+            "Text embedding models: sentence-transformers, OpenAI text-embedding-3",
+            "Document chunking strategies: fixed-size, semantic, recursive",
+            "Hybrid search: dense retrieval + BM25 keyword re-ranking",
+            "RAG pipeline: document indexing, query embedding, context injection",
+            "Context window optimization and retrieval quality evaluation"
+          ],
+          "resources": [
+            { "title": "LangChain RAG Tutorial (Official Docs)", "url": "https://python.langchain.com/docs/tutorials/rag/", "type": "Docs" },
+            { "title": "DeepLearning.AI — LangChain for LLM App Dev (Free Short Course)", "url": "https://www.deeplearning.ai/short-courses/langchain-for-llm-application-development/", "type": "Course" }
+          ],
+          "checklist": [
+            "Index a PDF document corpus into a Chroma vector database.",
+            "Build an end-to-end RAG pipeline answering questions over a codebase.",
+            "Evaluate retrieval recall at k=5 using a labeled question set."
+          ]
+        },
+        {
+          "id": "gen-p2-n2",
+          "title": "LangChain & LlamaIndex Agent Development",
+          "difficulty": "Required",
+          "time": "1.5 Weeks",
+          "description": "Building autonomous LLM agents with tool use, chain-of-thought reasoning, memory, and LangChain expression language.",
+          "topics": [
+            "LangChain core: LCEL chains, prompts, and output parsers",
+            "ReAct agents: Reasoning and Acting with tool calls",
+            "Custom tool definitions and API integration",
+            "Memory types: ConversationBufferMemory, vector-store memory",
+            "LlamaIndex knowledge base construction and query engines",
+            "Error handling and output validation in LLM pipelines"
+          ],
+          "resources": [
+            { "title": "LangChain Python Official Documentation", "url": "https://python.langchain.com/", "type": "Docs" },
+            { "title": "LlamaIndex Official Documentation", "url": "https://docs.llamaindex.ai/", "type": "Docs" }
+          ],
+          "checklist": [
+            "Build a ReAct agent with web search + calculator tools.",
+            "Add conversation memory to a multi-turn chatbot.",
+            "Create a LlamaIndex query engine over a structured database."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "gen-phase-3",
+      "number": 3,
+      "title": "Multimodal AI & Production GenAI Infrastructure",
+      "description": "Stable Diffusion image generation, text-to-image pipelines, CI/CD for LLM apps, and production monitoring.",
+      "color": "#3fb950",
+      "nodes": [
+        {
+          "id": "gen-p3-n1",
+          "title": "Multimodal AI: Image Generation & Vision-Language",
+          "difficulty": "Advanced",
+          "time": "1.5 Weeks",
+          "description": "Stable Diffusion architecture, ControlNet, CLIP vision-language models, and text-to-image/image-to-text systems.",
+          "topics": [
+            "Diffusion model fundamentals: forward noising and denoising score matching",
+            "Stable Diffusion architecture: U-Net, VAE, CLIP text encoder",
+            "ControlNet for pose, edge, and depth-conditioned image generation",
+            "CLIP: Contrastive Language-Image Pretraining and zero-shot classification",
+            "LLaVA / Idefics multimodal vision-language models",
+            "Text-to-image API integration (Stability AI, DALL-E, Midjourney API)"
+          ],
+          "resources": [
+            { "title": "Hugging Face Diffusers Library Documentation", "url": "https://huggingface.co/docs/diffusers/", "type": "Docs" },
+            { "title": "DeepLearning.AI — How Diffusion Models Work (Free Short Course)", "url": "https://www.deeplearning.ai/short-courses/how-diffusion-models-work/", "type": "Course" }
+          ],
+          "checklist": [
+            "Generate images using a Stable Diffusion pipeline with custom prompts.",
+            "Apply ControlNet with a Canny edge map for precise composition.",
+            "Build a CLIP-based zero-shot image classifier on 10 classes."
+          ]
+        },
+        {
+          "id": "gen-p3-n2",
+          "title": "GenAI Infrastructure: CI/CD, Testing & Production Monitoring",
+          "difficulty": "Required",
+          "time": "1 Week",
+          "description": "Testing LLM apps, CI/CD pipelines, A/B testing, cost optimization, model drift detection, and production logging.",
+          "topics": [
+            "Testing GenAI applications: unit tests, integration tests, evals",
+            "CI/CD for LLM applications with GitHub Actions",
+            "LLM evaluation frameworks: RAGAS, TruLens, DeepEval",
+            "Cost optimization: caching, batching, and model routing",
+            "Model drift detection and automated retraining triggers",
+            "Production logging and observability with LangSmith"
+          ],
+          "resources": [
+            { "title": "RAGAS RAG Evaluation Framework", "url": "https://docs.ragas.io/", "type": "Docs" },
+            { "title": "LangSmith LLM Observability Platform", "url": "https://docs.smith.langchain.com/", "type": "Docs" }
+          ],
+          "checklist": [
+            "Write an automated eval suite for a RAG pipeline using RAGAS.",
+            "Set up a GitHub Actions CI workflow running LLM integration tests.",
+            "Implement semantic caching to reduce LLM API costs by 40%+."
+          ]
+        }
+      ]
+    }
+  ]
+}

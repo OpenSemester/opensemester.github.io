@@ -1,0 +1,238 @@
+{
+  "title": "Data Analysis Using Python",
+  "subtitle": "Master data wrangling, exploratory analysis, visualization, and statistical hypothesis testing using NumPy, Pandas, Matplotlib, and Seaborn.",
+  "id": "data-analysis-python",
+  "order": 2,
+  "prerequisite": "python-programming",
+  "estimatedTime": "5 - 7 Weeks",
+  "totalModules": 10,
+  "phases": [
+    {
+      "id": "da-phase-1",
+      "number": 1,
+      "title": "NumPy, Pandas & Data Ingestion",
+      "description": "Setting up the analysis environment, NumPy arrays, Pandas DataFrames, and reading data from CSV, Excel, JSON, and SQL.",
+      "color": "#58a6ff",
+      "nodes": [
+        {
+          "id": "da-p1-n1",
+          "title": "NumPy Arrays & Vectorized Operations",
+          "difficulty": "Required",
+          "time": "1 Week",
+          "description": "NumPy array creation, indexing, slicing, broadcasting, and vectorized mathematical operations for numerical computing.",
+          "topics": [
+            "Setting up Python environment: Anaconda, Jupyter Notebook, VS Code",
+            "NumPy array creation: np.array, np.zeros, np.ones, np.arange, np.linspace",
+            "Indexing, slicing, boolean masking, and fancy indexing",
+            "Vectorized operations and broadcasting rules",
+            "Universal functions (ufuncs): np.sum, np.mean, np.std, np.where",
+            "Reshaping, stacking, and splitting arrays"
+          ],
+          "resources": [
+            { "title": "NumPy Official Documentation", "url": "https://numpy.org/doc/stable/", "type": "Docs" },
+            { "title": "freeCodeCamp NumPy Full Tutorial (YouTube)", "url": "https://www.youtube.com/watch?v=QUT1VHiLmmI", "type": "YouTube" }
+          ],
+          "checklist": [
+            "Create a 2D matrix and perform matrix multiplication.",
+            "Use boolean masking to filter values above a threshold.",
+            "Benchmark vectorized NumPy operations vs Python loops."
+          ]
+        },
+        {
+          "id": "da-p1-n2",
+          "title": "Pandas DataFrames, Series & Data Ingestion",
+          "difficulty": "Required",
+          "time": "1 Week",
+          "description": "Pandas Series and DataFrame creation, indexing, reading CSV/Excel/JSON/SQL data sources.",
+          "topics": [
+            "Pandas Series and DataFrame fundamentals",
+            "Indexing: .loc, .iloc, boolean filtering",
+            "Reading data: pd.read_csv, pd.read_excel, pd.read_json, pd.read_sql",
+            "Writing data back to CSV, Excel, and JSON",
+            "DataFrame info, dtypes, describe, and head/tail inspection",
+            "Setting and resetting index"
+          ],
+          "resources": [
+            { "title": "Pandas Official Documentation", "url": "https://pandas.pydata.org/docs/", "type": "Docs" },
+            { "title": "Corey Schafer Pandas Tutorial Series (YouTube)", "url": "https://www.youtube.com/playlist?list=PL-osiE80TeTsWmV9i9c58mdDCSskIFdDS", "type": "YouTube" }
+          ],
+          "checklist": [
+            "Load a real-world CSV dataset and inspect it with .info() and .describe().",
+            "Filter rows using multi-condition boolean expressions.",
+            "Export a transformed DataFrame to CSV and Excel."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "da-phase-2",
+      "number": 2,
+      "title": "Data Cleaning & Preprocessing",
+      "description": "Handling missing values, duplicates, outliers, type conversions, and feature scaling.",
+      "color": "#3fb950",
+      "nodes": [
+        {
+          "id": "da-p2-n1",
+          "title": "Data Cleaning: Missing Values, Duplicates & Type Conversions",
+          "difficulty": "Required",
+          "time": "1 Week",
+          "description": "Detecting and handling missing data, removing duplicates, and correcting inconsistent data types.",
+          "topics": [
+            "Detecting missing values: .isnull(), .isna(), .notna()",
+            "Imputation strategies: mean, median, mode, forward/backward fill",
+            "Dropping rows and columns: .dropna() with threshold",
+            "Identifying and removing duplicate rows: .duplicated(), .drop_duplicates()",
+            "Data type conversions: .astype(), pd.to_datetime(), pd.to_numeric()",
+            "String cleaning: .str.strip(), .str.lower(), regex replacement"
+          ],
+          "resources": [
+            { "title": "Pandas Data Cleaning Guide — Real Python", "url": "https://realpython.com/python-data-cleaning-numpy-pandas/", "type": "Blog" },
+            { "title": "Kaggle Data Cleaning Course (Free)", "url": "https://www.kaggle.com/learn/data-cleaning", "type": "Course" }
+          ],
+          "checklist": [
+            "Detect and impute missing values with column-specific strategies.",
+            "Remove duplicate rows and document cleaning decisions.",
+            "Convert a date string column to datetime and extract month/year."
+          ]
+        },
+        {
+          "id": "da-p2-n2",
+          "title": "Outlier Detection & Feature Scaling",
+          "difficulty": "Required",
+          "time": "0.5 Weeks",
+          "description": "Statistical outlier detection (Z-score, IQR), and feature normalization techniques for ML preprocessing.",
+          "topics": [
+            "Z-score outlier detection and removal",
+            "IQR (Interquartile Range) fence-based outlier filtering",
+            "Min-Max Normalization (0-1 scaling)",
+            "Standardization (Z-score scaling, mean=0, std=1)",
+            "Robust scaling for outlier-resistant normalization",
+            "Handling categorical data: one-hot encoding, label encoding"
+          ],
+          "resources": [
+            { "title": "Scikit-Learn Preprocessing Documentation", "url": "https://scikit-learn.org/stable/modules/preprocessing.html", "type": "Docs" }
+          ],
+          "checklist": [
+            "Identify outliers in a dataset using the IQR method.",
+            "Apply Min-Max and StandardScaler normalization.",
+            "One-hot encode a categorical column."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "da-phase-3",
+      "number": 3,
+      "title": "Exploratory Data Analysis (EDA) & Visualization",
+      "description": "Grouping, aggregation, pivot tables, Matplotlib plots, Seaborn heatmaps, and statistical EDA.",
+      "color": "#bc8cff",
+      "nodes": [
+        {
+          "id": "da-p3-n1",
+          "title": "EDA: Groupby, Aggregation & Pivot Tables",
+          "difficulty": "Required",
+          "time": "1 Week",
+          "description": "Descriptive statistics, groupby aggregations, merging DataFrames, and building pivot table summaries.",
+          "topics": [
+            "Descriptive statistics: mean, median, mode, variance, std deviation",
+            "groupby() with aggregate functions: sum, mean, count, agg()",
+            "Merging and joining DataFrames: inner, left, right, outer joins",
+            "Concatenating and appending DataFrames",
+            "Pivot tables and crosstab analysis",
+            "Correlation matrix and covariance analysis"
+          ],
+          "resources": [
+            { "title": "Pandas Groupby Documentation", "url": "https://pandas.pydata.org/docs/user_guide/groupby.html", "type": "Docs" },
+            { "title": "Kaggle Pandas Course (Free)", "url": "https://www.kaggle.com/learn/pandas", "type": "Course" }
+          ],
+          "checklist": [
+            "Group a sales dataset by region and compute monthly revenue aggregates.",
+            "Merge two DataFrames on a shared key column.",
+            "Build a pivot table showing average sales by product category."
+          ]
+        },
+        {
+          "id": "da-p3-n2",
+          "title": "Data Visualization with Matplotlib & Seaborn",
+          "difficulty": "Required",
+          "time": "1 Week",
+          "description": "Creating publication-quality charts using Matplotlib and Seaborn for distributions, relationships, and comparisons.",
+          "topics": [
+            "Matplotlib basics: line plots, bar charts, scatter plots, histograms",
+            "Subplots: plt.subplots(), fig and axes objects",
+            "Seaborn: boxplots, violin plots, heatmaps, pairplots, stripplots",
+            "Customizing plots: titles, labels, legends, color palettes, grid styles",
+            "Visualizing distributions and feature relationships",
+            "Saving high-resolution plots for reports"
+          ],
+          "resources": [
+            { "title": "Matplotlib Official Documentation", "url": "https://matplotlib.org/stable/contents.html", "type": "Docs" },
+            { "title": "Seaborn Official Documentation & Gallery", "url": "https://seaborn.pydata.org/", "type": "Docs" }
+          ],
+          "checklist": [
+            "Create a Seaborn heatmap of the correlation matrix.",
+            "Build a side-by-side boxplot comparing distributions by category.",
+            "Export a publication-quality figure at 300 DPI."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "da-phase-4",
+      "number": 4,
+      "title": "Statistical Analysis & Real-World Projects",
+      "description": "Hypothesis testing, probability distributions, regression analysis, and end-to-end data analysis capstone project.",
+      "color": "#d29922",
+      "nodes": [
+        {
+          "id": "da-p4-n1",
+          "title": "Statistical Analysis & Hypothesis Testing",
+          "difficulty": "Required",
+          "time": "1 Week",
+          "description": "Probability distributions, t-tests, ANOVA, chi-square, confidence intervals, and p-value interpretation.",
+          "topics": [
+            "Probability distributions: Normal, Binomial, Poisson",
+            "Central Limit Theorem and sampling distributions",
+            "t-test (one-sample, two-sample, paired)",
+            "ANOVA and chi-square tests for categorical data",
+            "p-values, statistical significance, and Type I/II errors",
+            "Confidence intervals and margin of error"
+          ],
+          "resources": [
+            { "title": "StatQuest Statistics Videos (YouTube)", "url": "https://www.youtube.com/@statquest", "type": "YouTube" },
+            { "title": "Khan Academy Statistics & Probability", "url": "https://www.khanacademy.org/math/statistics-probability", "type": "Course" }
+          ],
+          "checklist": [
+            "Perform a two-sample t-test to compare two group means.",
+            "Interpret p-values and confidence intervals from SciPy output.",
+            "Test for normality using the Shapiro-Wilk test."
+          ]
+        },
+        {
+          "id": "da-p4-n2",
+          "title": "Linear Regression & End-to-End Capstone Project",
+          "difficulty": "Required",
+          "time": "1 Week",
+          "description": "Simple and multiple linear regression, model evaluation metrics, and a complete data analysis project with professional reporting.",
+          "topics": [
+            "Simple and multiple linear regression with scikit-learn",
+            "Evaluation metrics: MSE, RMSE, MAE, R² score",
+            "Residual analysis and regression assumptions",
+            "End-to-end project pipeline: data loading to final report",
+            "Jupyter Notebook documentation and Markdown storytelling",
+            "Exporting analysis to HTML and PDF reports"
+          ],
+          "resources": [
+            { "title": "Scikit-Learn Linear Models Documentation", "url": "https://scikit-learn.org/stable/modules/linear_model.html", "type": "Docs" },
+            { "title": "Kaggle Learn — Intro to Machine Learning", "url": "https://www.kaggle.com/learn/intro-to-machine-learning", "type": "Course" }
+          ],
+          "checklist": [
+            "Build a multiple linear regression model on a housing dataset.",
+            "Evaluate model using RMSE and R² score on a test split.",
+            "Write a professional Jupyter Notebook analysis report."
+          ]
+        }
+      ]
+    }
+  ]
+}
